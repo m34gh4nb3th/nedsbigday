@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'NothingYouCouldDo';
+  src: local('NothingYouCouldDo'), url(./fonts/NothingYouCouldDo-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'AmaticSC';
+  src: local('AmaticSC'), url(./fonts/AmaticSC-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: local('Pacifico'), url(./fonts/Pacifico-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat-Black.ttf) format('truetype');
+}

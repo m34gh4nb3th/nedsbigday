@@ -1,46 +1,53 @@
 import React from 'react';
-import { Button } from 'antd';
 import './App.less';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import NavBar from './Components/NavBar';
+import FooterCredits from './Components/FooterCredits';
+import Header from './Components/Header';
 import Home from './Components/Pages/Home';
+import RSVP from './Components/Pages/RSVP';
+import Travel from './Components/Pages/Travel';
+import ToDo from './Components/Pages/ToDo';
+import Trivia from './Components/Pages/Trivia';
+import Registry from './Components/Pages/Registry';
+import { Layout } from 'antd';
+
+const { Footer, Content } = Layout;
 
 const App = () => (
-  <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-      </ul>
-
-      <hr />
-
-      {/*
-        A <Switch> looks through all its children <Route>
-        elements and renders the first one whose path
-        matches the current URL. Use a <Switch> any time
-        you have multiple routes, but you want only one
-        of them to render at a time
-      */}
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        
-      </Switch>
-    </div>
-  </Router>
+  <Layout style={{ backgroundColor: 'white' }}>
+    <Content style={{ minHeight: '1000px'}}>
+      <Router>
+        <Header />
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/rsvp">
+            <RSVP />
+          </Route>
+          <Route path="/travel">
+            <Travel />
+          </Route>
+          <Route path="/todo">
+            <ToDo />
+          </Route>
+          <Route path="/trivia">
+            <Trivia />
+          </Route>
+          <Route path="/registry">
+            <Registry />
+          </Route>
+        </Switch>
+      </Router>
+    </Content>
+    <Footer style={{ backgroundColor: 'white' }}> <FooterCredits/> </Footer>
+  </Layout>
 );
 
 export default App;
