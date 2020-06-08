@@ -1,0 +1,42 @@
+import React from 'react';
+import { Menu } from 'antd';
+import { Link, withRouter } from "react-router-dom";
+
+const NavBarRouter = withRouter(props => <NavBar {...props}/>);
+
+class NavBar extends React.Component {
+    constructor(props) {
+        super(props);
+        let currentPath = this.props.location.pathname.substring(1);
+        this.state = {
+            selectedKey: currentPath || "home",
+        };
+    }
+
+    render() {
+        return (
+            <Menu mode="horizontal" style={{ textAlign: 'center', borderBottom: '0px'}} defaultSelectedKeys={[this.state.selectedKey]}>
+                <Menu.Item key="home">
+                    <Link to="/">Home</Link>
+                </Menu.Item>
+                <Menu.Item key="rsvp">
+                    <Link to="/rsvp">RSVP</Link>
+                </Menu.Item>
+                <Menu.Item key="travel">
+                    <Link to="/travel">Travel and Accomodations</Link>
+                </Menu.Item>
+                <Menu.Item key="todo">
+                    <Link to="/todo">Things to Do</Link>
+                </Menu.Item>
+                <Menu.Item key="trivia">
+                    <Link to="/trivia">Trivia</Link>
+                </Menu.Item>
+                <Menu.Item key="registry">
+                    <Link to="/registry">Registry</Link>
+                </Menu.Item>
+            </Menu>
+        )
+    }
+}
+
+export default NavBarRouter;
