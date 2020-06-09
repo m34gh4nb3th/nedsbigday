@@ -11,7 +11,7 @@ import Header from './Components/Header';
 import Home from './Components/Pages/Home';
 import RSVP from './Components/Pages/RSVP';
 import Travel from './Components/Pages/Travel';
-import ToDo from './Components/Pages/ToDo';
+import ActivitiesPage from './Components/Activities/ActivitiesPage';
 import Trivia from './Components/Pages/Trivia';
 import Registry from './Components/Pages/Registry';
 import { Layout } from 'antd';
@@ -34,8 +34,8 @@ const App = () => (
           <Route path="/travel">
             <Travel />
           </Route>
-          <Route path="/todo">
-            <ToDo />
+          <Route path="/activities">
+            <ActivitiesPage />
           </Route>
           <Route path="/trivia">
             <Trivia />

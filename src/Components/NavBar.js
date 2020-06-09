@@ -25,8 +25,8 @@ class NavBar extends React.Component {
                 <Menu.Item key="travel">
                     <Link to="/travel">Travel and Accomodations</Link>
                 </Menu.Item>
-                <Menu.Item key="todo">
-                    <Link to="/todo">Things to Do</Link>
+                <Menu.Item key="activities">
+                    <Link to="/activities">Local Attractions</Link>
                 </Menu.Item>
                 <Menu.Item key="trivia">
                     <Link to="/trivia">Trivia</Link>

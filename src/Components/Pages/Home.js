@@ -62,7 +62,7 @@ class Home extends React.Component {
                             <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>When?</span> 4:00PM - 5:00PM
                         </div>
                         <br/>
-                        <div style={{ textAlign: 'center', color: '#808080', fontWeight: 'bold', fontSize: 16}}>Reception</div>
+                        <div style={{ textAlign: 'center', color: '#808080', fontWeight: 'bold', fontSize: 16}}>Cocktail Hour and Reception</div>
                         <div style={{ textAlign: 'center'}}>
                             <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Who?</span> Everyone! 
                             <Divider type="vertical" />
