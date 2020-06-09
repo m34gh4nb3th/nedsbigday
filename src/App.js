@@ -8,7 +8,7 @@ import {
 import NavBar from './Components/NavBar';
 import FooterCredits from './Components/FooterCredits';
 import Header from './Components/Header';
-import Home from './Components/Pages/Home';
+import HomePage from './Components/Home/HomePage';
 import RSVP from './Components/Pages/RSVP';
 import Travel from './Components/Pages/Travel';
 import ActivitiesPage from './Components/Activities/ActivitiesPage';
@@ -26,7 +26,7 @@ const App = () => (
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <HomePage />
           </Route>
           <Route path="/rsvp">
             <RSVP />
