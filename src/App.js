@@ -9,10 +9,10 @@ import NavBar from './Components/NavBar';
 import FooterCredits from './Components/FooterCredits';
 import Header from './Components/Header';
 import HomePage from './Components/Home/HomePage';
-import RSVP from './Components/Pages/RSVP';
+import RsvpPage from './Components/RSVP/RsvpPage';
 import Travel from './Components/Pages/Travel';
 import ActivitiesPage from './Components/Activities/ActivitiesPage';
-import Trivia from './Components/Pages/Trivia';
+import TriviaPage from './Components/Trivia/TriviaPage';
 import Registry from './Components/Pages/Registry';
 import { Layout } from 'antd';
 
@@ -29,7 +29,7 @@ const App = () => (
             <HomePage />
           </Route>
           <Route path="/rsvp">
-            <RSVP />
+            <RsvpPage />
           </Route>
           <Route path="/travel">
             <Travel />
@@ -38,7 +38,7 @@ const App = () => (
             <ActivitiesPage />
           </Route>
           <Route path="/trivia">
-            <Trivia />
+            <TriviaPage />
           </Route>
           <Route path="/registry">
             <Registry />
