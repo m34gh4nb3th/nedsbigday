@@ -9,7 +9,7 @@ class Travel extends React.Component {
     render() {
         return(
             <div style={{ paddingLeft: '100px', paddingRight: '100px', paddingTop: '50px', paddingBottom: '100px' }}>
-                <h2 style={{textAlign: 'center', fontFamily: 'AmaticSC', fontSize: 42, paddingBottom: '25px'}}>Travel and Accommodations</h2>
+                <h1 style={{ paddingBottom: '25px' }}>Travel and Accommodations</h1>
             </div>
         )
     }

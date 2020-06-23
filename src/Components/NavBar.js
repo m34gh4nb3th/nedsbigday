@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { Link, withRouter } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 const NavBarRouter = withRouter(props => <NavBar {...props}/>);
 
@@ -23,10 +24,10 @@ class NavBar extends React.Component {
                     <Link to="/rsvp">RSVP</Link>
                 </Menu.Item>
                 <Menu.Item key="travel">
-                    <Link to="/travel">Travel and Accomodations</Link>
+                    <Link to="/travel">{isMobile ? 'Travel' : 'Travel and Accomodations'}</Link>
                 </Menu.Item>
                 <Menu.Item key="activities">
-                    <Link to="/activities">Local Attractions</Link>
+                    <Link to="/activities">{isMobile ? 'Attractions' : 'Local Attractions'}</Link>
                 </Menu.Item>
                 <Menu.Item key="trivia">
                     <Link to="/trivia">Trivia</Link>

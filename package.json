@@ -13,11 +13,16 @@
     "craco-less": "^1.17.0",
     "firebase": "^7.15.0",
     "react": "^16.13.1",
+    "react-confetti": "^5.0.1",
+    "react-device-detect": "^1.12.1",
     "react-dom": "^16.13.1",
+    "react-dom-confetti": "^0.1.3",
     "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-use": "^15.2.5",
+    "react-use-window-size": "^1.0.1"
   },
   "scripts": {
     "start": "craco start",
