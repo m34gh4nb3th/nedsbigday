@@ -33,9 +33,9 @@ class Activities extends React.Component {
         return(
             <Fragment>
                 <div style={style.page}>
-                    <h1 style={{ paddingBottom: '25px' }}>Local Attractions</h1>
+                    <h1 style={{ paddingBottom: '25px' }}>LOCAL ATTRACTIONS</h1>
                     <div style={style.info}>
-                        <i >We are so thankful for everyone who is traveling so far to share this occasion with us -- We hope you can enjoy some of the things we love so much about this city!</i>
+                        <i >We are so thankful for everyone who is traveling so far to share this occasion with us. While you are here, we hope you can enjoy some of the things we love so much about this city!</i>
                     </div>
                 </div>
                 <ActivityLayout titleSide="left" title="Things To Eat" activities={activityData.toEat} icon={<img src="/food-and-wine-icon.png" width={iconSize} alt=""/>} restaurant={true}/>

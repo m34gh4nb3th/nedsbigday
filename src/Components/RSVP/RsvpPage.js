@@ -63,25 +63,23 @@ const RsvpPage = () => {
     const headerWrapper = {
         paddingLeft: isMobile ? '10px' : '100px', 
         paddingRight: isMobile ? '10px' : '100px', 
-        paddingTop: '50px', 
-        paddingBottom: '50px', 
     }
 
     const pageStyle = {
         paddingLeft: isMobile ? '10px' : '100px', 
         paddingRight: isMobile ? '10px' : '100px', 
-        paddingTop: '50px', 
+        paddingTop: '50px',
         paddingBottom: isMobile ? '50px' : '100px' 
     }
 
     return (
         <div style={pageStyle}>
             <div style={headerWrapper}>
-                <h1>RSVP</h1>
-                <h1><small>Please RSVP by February 7th, 2021</small></h1>
+                <h1 style={{marginBottom: '0px'}}>RSVP</h1>
+                <h1 style={{ fontSize: '16px'}}>By February 7th, 2021</h1>
             </div>
             {!thisGuest &&
-                <Row justify="center">
+                <Row justify="center" style={{marginTop: '50px'}}>
                     <Col md={{ span: 12 }} xs={{ span: 24}}>
                     <div style={{textAlign: 'center', marginBottom: '25px'}}>
                         <h3 style={{marginBottom: '0px' }}>Please enter your full name as it appears on your invitation.</h3> 
@@ -116,7 +114,7 @@ const RsvpPage = () => {
                             expandIcon={({ isActive, disabled }) => 
                                 <CaretRightOutlined 
                                 rotate={isActive ? 90 : 0} 
-                                style={!disabled ? {color: '#1DA57A', fontSize: '18px'} : {color: '#9bc2b6', fontSize: '18px'}}/>}
+                                style={!disabled ? {color: '#86b59f', fontSize: '18px'} : {color: '#bcd4c9', fontSize: '18px'}}/>}
                             >
                             <Panel header={<h4>Wedding Day</h4>} key="1" style={{ borderBottom: '0px'}}>
                                 <WeddingRSVP 
@@ -125,7 +123,7 @@ const RsvpPage = () => {
                                 setPlusOneGuest={setPlusOneGuest}
                                 setThisGuest={setThisGuest}/>   
                             </Panel>
-                            <Panel header={<h4 style={{color: '#9bc2b6'}}>Other Events <small>(coming soon)</small></h4>} key="2" disabled style={{ borderBottom: '0px'}}>
+                            <Panel header={<h4 style={{color: '#bcd4c9'}}>Other Events <small>(coming soon)</small></h4>} key="2" disabled style={{ borderBottom: '0px'}}>
                                 <ContactInfo/>
                             </Panel>
                             <Panel header={<h4>Contact Info</h4>} key="3" style={{ borderBottom: '0px'}}>

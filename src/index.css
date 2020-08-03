@@ -32,3 +32,18 @@ code {
   src: local('Montserrat'), url(./fonts/Montserrat-Black.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Meddon';
+  src: local('Meddon'), url(./fonts/Meddon-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/Poppins-ExtraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: local('Poppins'), url(./fonts/Poppins-Light.ttf) format('truetype');
+}
+

@@ -36,10 +36,9 @@ class Registry extends React.Component {
 
         return(
             <div style={headerWrapper}>
-                <h1 style={{ paddingBottom: '25px' }}>Registry</h1>
+                <h1 style={{ paddingBottom: '25px' }}>REGISTRY</h1>
                 <Row align="center">
                     <Col md={{ span: 16}} xs={{ span: 24}} style={{ textAlign: 'center'}}>
-                        <p>For our wedding registry we decided to set up a honeymoon fund rather than a traditional gift registry.</p>
                         <a target="_blank" href="https://registry.theknot.com/meaghan-crowley-ian-thomas-august-2021-wa/40865926">
                             <Button type="primary" size="large">Honeymoon Fund</Button>
                         </a>
