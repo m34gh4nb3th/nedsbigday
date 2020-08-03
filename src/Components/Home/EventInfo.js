@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Divider } from 'antd';
 
 import {
@@ -18,7 +18,7 @@ class EventInfo extends React.Component {
             <div style={{ paddingBottom: '50px'}}>
                 <h3>
                     {this.props.eventName}
-                    {this.props.extra && 
+                    {this.props.extra && !this.props.detailsTbd && 
                         <p style={{ fontSize: 12 }}><i>{this.props.extra}</i></p>
                     }
                 </h3>
@@ -30,27 +30,34 @@ class EventInfo extends React.Component {
                     {isMobile && 
                         <br />
                     }
-                    <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Where?</span> 
-                    {this.props.locationLink && 
-                        <a href={this.props.locationLink}>{this.props.locationName}</a>
+                    {this.props.detailsTbd &&
+                        <i>Details to come</i>
                     }
-                    {!this.props.locationLink && 
-                        this.props.locationName
+                    {!this.props.detailsTbd &&
+                        <Fragment>
+                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Where?</span> 
+                            {this.props.locationLink && 
+                                <a href={this.props.locationLink}>{this.props.locationName}</a>
+                            }
+                            {!this.props.locationLink && 
+                                this.props.locationName
+                            }
+                            {isBrowser && 
+                                <Divider type="vertical" />
+                            }
+                            {isMobile && 
+                                <br />
+                            }
+                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>When?</span> {this.props.time}
+                            {isBrowser && 
+                                <Divider type="vertical" />
+                            }
+                            {isMobile && 
+                                <br />
+                            }
+                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Wear?</span> {this.props.attire}
+                        </Fragment>
                     }
-                    {isBrowser && 
-                        <Divider type="vertical" />
-                    }
-                    {isMobile && 
-                        <br />
-                    }
-                    <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>When?</span> {this.props.time}
-                    {isBrowser && 
-                        <Divider type="vertical" />
-                    }
-                    {isMobile && 
-                        <br />
-                    }
-                    <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Wear?</span> {this.props.attire}
                 </div>
             </div>
         )

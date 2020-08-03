@@ -27,7 +27,7 @@ class HomePage extends React.Component {
         
         return (
             <div style={pageStyle}>
-                <h1 style={{ paddingBottom: isMobile ? '0px' : '25px' }}>Event Details</h1>
+                <h1 style={{ paddingBottom: isMobile ? '0px' : '25px' }}>EVENT DETAILS</h1>
                 {Object.keys(eventData).map( (date, index, arr) => (
                     <div key={date}>
                         <Row justify="center" gutter={4}>
@@ -45,6 +45,7 @@ class HomePage extends React.Component {
                                         time = {event.time}
                                         attire = {event.attire}
                                         key={event.eventName}
+                                        detailsTbd={event.detailsTbd}
                                     />
                                 ))}
                             </Col>

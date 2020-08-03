@@ -8,7 +8,7 @@ import ResultsPage from './ResultsPage';
 import RingLoading from '../RSVP/RingLoading';
 import { getRandom } from '../../utils';
 
-const numOfQuestions = 3;
+const numOfQuestions = 10;
 
 class TriviaPage extends React.Component {
     constructor(props) {
@@ -89,7 +89,6 @@ class TriviaPage extends React.Component {
                 paddingLeft: isMobile ? '10px' : '100px', 
                 paddingRight: isMobile ? '10px' : '100px', 
                 paddingTop: '50px', 
-                paddingBottom: '10px', 
             },
             progress: {
                 paddingLeft: isMobile ? '10px' : '100px', 
@@ -103,7 +102,7 @@ class TriviaPage extends React.Component {
         return(
             <div>
                 <div style={style.header}>
-                    <h1>Trivia</h1>
+                    <h1>TRIVIA</h1>
                 </div>
                 {this.state.progress === null && 
                     <TriviaStart startTrivia={this.startTrivia} loading={this.state.loading}/>
@@ -126,7 +125,7 @@ class TriviaPage extends React.Component {
                             strokeLinecap="square" 
                             percent={progressPercent} 
                             style={style.progress} 
-                            strokeColor={'#1DA57A'}
+                            strokeColor={'#86b59f'}
                             showInfo={false}
                         />
                     </Fragment>
