@@ -80,7 +80,7 @@ class TriviaQuestion extends React.Component {
         const cardClass = this.state.result === 'Correct' ? 'card-with-shadow card-with-click' : 'card-with-shadow';
         return (
             <Row align='center'>
-                <Col md={{ span: 12 }} xs={{ span: 16 }}>
+                <Col md={{ span: 12 }} xs={{ span: 22 }}>
                     <h2>{this.props.question.question_text}</h2>
                     {!this.state.result && 
                         <Fragment>
@@ -91,7 +91,7 @@ class TriviaQuestion extends React.Component {
                                     </Radio>
                                 )}
                             </Radio.Group>
-                            <div style={{ textAlign: 'right' }}>
+                            <div style={{ textAlign: 'right', marginTop: '15px' }}>
                                 <Button size="large" type="primary" onClick={this.checkAnswer} disabled={!this.state.selectedAnswer}>Submit</Button>
                             </div>
                         </Fragment>
@@ -99,7 +99,7 @@ class TriviaQuestion extends React.Component {
                     {this.state.result &&  
                         <Fragment>
                             <Row style={{minHeight: '200px'}} justify="center" align="middle">
-                                <Col md={{ span: 12 }} xs={{ span: 16 }}>
+                                <Col md={{ span: 12 }} xs={{ span: 20 }}>
                                     <Card onClick={this.makeConfetti} className={cardClass}>
                                         <h3 style={{ fontSize: 32 }}>{this.state.result}{this.state.result === 'Correct' ? '!' : ''}</h3>
                                         <div  style={{ textAlign: 'center', marginLeft: '90px' }}>
@@ -118,7 +118,7 @@ class TriviaQuestion extends React.Component {
                                     </Card>
                                 </Col>
                             </Row>
-                            <div style={{ textAlign: 'right' }}>
+                            <div style={{ textAlign: 'right', marginTop: '15px' }}>
                                 <Button size="large" type="primary" onClick={this.nextQuestion}>{nextButtonText}</Button>
                             </div>
                         </Fragment>

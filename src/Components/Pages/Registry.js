@@ -40,7 +40,7 @@ class Registry extends React.Component {
                 <Row align="center">
                     <Col md={{ span: 16}} xs={{ span: 24}} style={{ textAlign: 'center'}}>
                         <p>For our wedding registry we decided to set up a honeymoon fund rather than a traditional gift registry.</p>
-                        <a href="https://registry.theknot.com/meaghan-crowley-ian-thomas-august-2021-wa/40865926">
+                        <a target="_blank" href="https://registry.theknot.com/meaghan-crowley-ian-thomas-august-2021-wa/40865926">
                             <Button type="primary" size="large">Honeymoon Fund</Button>
                         </a>
                     </Col>
