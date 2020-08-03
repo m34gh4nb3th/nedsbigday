@@ -26,17 +26,11 @@ class ActivityItem extends React.Component {
                 <div style={{marginBottom: '25px'}}>
                     <h3 style={{ textAlign: this.props.align, marginBottom: '0px' }}>
                         {this.props.link && 
-                            <a href={this.props.link}> {this.props.title}</a>
+                            <a href={this.props.link} target="_blank"> {this.props.title}</a>
                         }
                         {!this.props.link && <span>{this.props.title}</span> }
                     </h3>
-                        {!this.props.restaurant && 
-                            <Fragment>
-                                <p>{this.props.subTitle}</p>
-                                <a onClick={this.showModal}>More Info</a>
-                            </Fragment>
-                        }
-                        {this.props.restaurant && 
+                        
                             <Fragment>
                                 <p>
                                     {this.props.subTitle}
@@ -45,7 +39,7 @@ class ActivityItem extends React.Component {
                                     <a onClick={this.showModal}>More Info</a>
                                 </p>
                             </Fragment>
-                        }     
+                            
                 </div>
                 <Modal
                     visible={this.state.modalVisible}

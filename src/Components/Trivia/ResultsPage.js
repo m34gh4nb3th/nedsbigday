@@ -35,7 +35,7 @@ class ResultsPage extends React.Component {
             <Fragment>
             
             <Row align='center' style={{ paddingTop: '50px', marginBottom: '100px'}}>
-                <Col md={{ span: 12 }} xs={{ span: 16 }} style={{ textAlign: 'center' }}>
+                <Col md={{ span: 12 }} xs={{ span: 22 }} style={{ textAlign: 'center' }}>
                     <h2>Results</h2>
                     <div  style={{ textAlign: 'center', marginLeft: '90px' }}>
                         <Confetti
@@ -44,13 +44,14 @@ class ResultsPage extends React.Component {
                             className="confetti-final"
                         />
                     </div>
-                    <h3 style={{ fontSize: '24px', marginBottom: '50px'}}>Your Score: {this.props.score}/{this.props.questionsNum}</h3>
+                    <h3 style={{ fontSize: '24px', marginBottom: '10px'}}>Your Score: {this.props.score}/{this.props.questionsNum}</h3>
+                    <Button type="primary" style={{marginBottom: '40px'}} onClick={this.props.playAgain}>Try Again</Button>
                     {this.props.responses.map( response => (
                         <Card style={{ textAlign: 'left', marginBottom: '10px' }} key={response.question}>
                             <h3>{response.question}</h3>
                             {response.result === 'Correct' && 
-                                <Row align="middle">
-                                    <Col span={18}>
+                                <Row align="end">
+                                    <Col md={{span: 12}} xs={{span: 12}} style={{textAlign: 'center', paddingTop: '10px'}}>
                                         <p><strong>Answer:</strong> {response.correctAnswer}</p>
                                     </Col>
                                     <Col span={6} style={{ textAlign:'right' }}>
@@ -59,10 +60,10 @@ class ResultsPage extends React.Component {
                                 </Row>
                             }
                             {response.result === 'Wrong' && 
-                                <Row align="middle">
-                                    <Col span={18}>
-                                        <p>You answered: {response.selectedAnswer}</p>
-                                        <strong>Correct answer: {response.correctAnswer}</strong>
+                                <Row align="end">
+                                    <Col md={{span: 12}} xs={{span: 12}} style={{textAlign: 'center', paddingTop: '10px'}}>
+                                        <p style={{ marginBottom: '4px'}}>You answered: {response.selectedAnswer}</p>
+                                        <p><strong>Correct answer: {response.correctAnswer}</strong></p>
                                     </Col>
                                     <Col span={6} style={{ textAlign:'right' }}>
                                         <CloseCircleTwoTone twoToneColor="#c42e1a" style={{fontSize: '48px'}} />
@@ -77,7 +78,6 @@ class ResultsPage extends React.Component {
                         </Card>
                     ))}
                 </Col>
-                <Button onClick={this.props.playAgain}>Try Again</Button>
             </Row>
             </Fragment>
         )
