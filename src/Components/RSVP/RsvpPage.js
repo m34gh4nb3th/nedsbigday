@@ -19,19 +19,6 @@ const RsvpPage = () => {
     const [ thisGuest, setThisGuest ] = useState(null);
     const [ plusOneGuest, setPlusOneGuest ] = useState(null);
 
-    // //arrow function, things to decide when to run function
-    // useEffect( () => {
-    //     //do something based on updated props
-    //     setEnteredName(props.test);
-    // },
-    // [props.test, props.title] );
-    // //an exmaple using state
-    // useEffect( () => {
-    //     //do something based on updated props
-    //     setLoading(true);
-    // },
-    // [enteredName] );
-
     const searchForGuest = () => {
         setLoading(!loading);
         setError(null);
@@ -81,9 +68,15 @@ const RsvpPage = () => {
             {!thisGuest &&
                 <Row justify="center" style={{marginTop: '50px'}}>
                     <Col md={{ span: 12 }} xs={{ span: 24}}>
-                    <div style={{textAlign: 'center', marginBottom: '25px'}}>
-                        <h3 style={{marginBottom: '0px' }}>Please enter your full name as it appears on your invitation.</h3> 
-                        <small >If there are multiple names on your invitation you may enter either</small>
+                    <div style={{marginBottom: '25px'}}>
+                        <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appears on your invitation</h3> <br/>
+                        <div style={{display: 'flex', justifyContent: 'center'}}>
+                            <ul>
+                                <li><small>You do not need to enter the Mr./Mrs./Ms. prefix</small></li>
+                                <li><small>If there are two names on your invitation you may enter either</small></li>
+                                <li><small>If there are more than two names you may need to enter them separately</small></li>
+                            </ul>
+                        </div>
                     </div>
                     <div style={{textAlign: 'center'}}>
                         <Input
