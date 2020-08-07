@@ -69,7 +69,7 @@ const RsvpPage = () => {
                 <Row justify="center" style={{marginTop: '50px'}}>
                     <Col md={{ span: 12 }} xs={{ span: 24}}>
                     <div style={{marginBottom: '25px'}}>
-                        <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appears on your invitation</h3> <br/>
+                        <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appear on your invitation</h3> <br/>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                             <ul>
                                 <li><small>You do not need to enter the Mr./Mrs./Ms. prefix</small></li>
