@@ -9,6 +9,18 @@ import RingLoading from '../RSVP/RingLoading';
 import { getRandom } from '../../utils';
 
 const numOfQuestions = 10;
+const style = {
+    header: {
+        paddingLeft: isMobile ? '10px' : '100px', 
+        paddingRight: isMobile ? '10px' : '100px', 
+        paddingTop: '50px', 
+    },
+    progress: {
+        paddingLeft: isMobile ? '10px' : '100px', 
+        paddingRight: isMobile ? '10px' : '100px',
+        paddingTop: '50px'
+    }
+}
 
 class TriviaPage extends React.Component {
     constructor(props) {
@@ -84,19 +96,6 @@ class TriviaPage extends React.Component {
     }
 
     render() {
-        const style = {
-            header: {
-                paddingLeft: isMobile ? '10px' : '100px', 
-                paddingRight: isMobile ? '10px' : '100px', 
-                paddingTop: '50px', 
-            },
-            progress: {
-                paddingLeft: isMobile ? '10px' : '100px', 
-                paddingRight: isMobile ? '10px' : '100px',
-                paddingTop: '50px'
-            }
-        }
-        console.log('this.state.questions',this.state.questions);
         const progressPercent = (this.state.questions.length === 0 || this.state.progress === null) ? 0 : (this.state.progress)/this.state.questions.length * 100;
         const lastQuestion = this.state.question === (this.state.questions.length - 1);
         return(
@@ -105,15 +104,19 @@ class TriviaPage extends React.Component {
                     <h1>TRIVIA</h1>
                 </div>
                 {this.state.progress === null && 
-                    <TriviaStart startTrivia={this.startTrivia} loading={this.state.loading}/>
+                    <TriviaStart 
+                        startTrivia={this.startTrivia} 
+                        loading={this.state.loading}
+                    />
                 }
-                {this.state.questions.length == 0 && this.state.progress != null &&
+                {this.state.questions.length === 0 && this.state.progress !== null &&
                         <Alert 
-                        message={"Oops! We could not find any trivia questions"} 
-                        type="error" 
-                        style={{margin: '20px', textAlign: 'center'}}/>
+                            message={"Oops! We could not find any trivia questions"} 
+                            type="error" 
+                            style={{margin: '20px', textAlign: 'center'}}
+                        />
                 }
-                {this.state.progress != null && !this.state.showResults && this.state.questions.length > 0 &&
+                {this.state.progress !== null && !this.state.showResults && this.state.questions.length > 0 &&
                     <Fragment>
                         <TriviaQuestion 
                             question={this.state.questions[this.state.question]} 

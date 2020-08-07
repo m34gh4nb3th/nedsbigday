@@ -16,6 +16,13 @@ const confettiConfig = {
     colors: ["#C1DCBD", "#2c332d", "#A4C0A7", "#3F6248", "#688F6D"]
 };
 
+const radioStyle = {
+    display: 'block',
+    height: '40px',
+    lineHeight: '40px',
+    fontSize: '20px',
+};
+
 class TriviaQuestion extends React.Component {
     constructor(props) {
         super(props);
@@ -69,13 +76,6 @@ class TriviaQuestion extends React.Component {
     }
 
     render() {
-        const radioStyle = {
-            display: 'block',
-            height: '40px',
-            lineHeight: '40px',
-            fontSize: '20px',
-        };
-
         const nextButtonText = this.props.lastQuestion ? 'See Your Final Score' : 'Next';
         const cardClass = this.state.result === 'Correct' ? 'card-with-shadow card-with-click' : 'card-with-shadow';
         return (
@@ -84,15 +84,30 @@ class TriviaQuestion extends React.Component {
                     <h2>{this.props.question.question_text}</h2>
                     {!this.state.result && 
                         <Fragment>
-                            <Radio.Group value={this.state.selectedAnswer} onChange={this.selectOption} style={{minHeight: '200px'}}>
+                            <Radio.Group 
+                                value={this.state.selectedAnswer} 
+                                onChange={this.selectOption} 
+                                style={{minHeight: '200px'}}
+                            >
                                 {this.props.question.possible_answers.map( option => 
-                                    <Radio value={option} key={option} style={radioStyle}>
+                                    <Radio 
+                                        value={option} 
+                                        key={option} 
+                                        style={radioStyle}
+                                    >
                                         {option}
                                     </Radio>
                                 )}
                             </Radio.Group>
                             <div style={{ textAlign: 'right', marginTop: '15px' }}>
-                                <Button size="large" type="primary" onClick={this.checkAnswer} disabled={!this.state.selectedAnswer}>Submit</Button>
+                                <Button 
+                                    size="large" 
+                                    type="primary" 
+                                    onClick={this.checkAnswer} 
+                                    disabled={!this.state.selectedAnswer}
+                                >
+                                    Submit
+                                </Button>
                             </div>
                         </Fragment>
                     }
@@ -119,11 +134,16 @@ class TriviaQuestion extends React.Component {
                                 </Col>
                             </Row>
                             <div style={{ textAlign: 'right', marginTop: '15px' }}>
-                                <Button size="large" type="primary" onClick={this.nextQuestion}>{nextButtonText}</Button>
+                                <Button 
+                                    size="large" 
+                                    type="primary" 
+                                    onClick={this.nextQuestion}
+                                >
+                                    {nextButtonText}
+                                </Button>
                             </div>
                         </Fragment>
                     }
-                    
                 </Col>
             </Row>
         )

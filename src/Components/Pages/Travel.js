@@ -5,7 +5,6 @@ import { isMobile } from "react-device-detect";
 const style = {
     card: {
         margin: '20px',
-        borderColor: '#9bc2b6'
     },
     page: {
         paddingLeft: isMobile ? '10px' : '100px', 
