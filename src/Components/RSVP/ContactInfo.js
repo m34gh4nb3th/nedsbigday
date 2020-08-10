@@ -3,6 +3,7 @@ import { Input, Button, Alert, notification } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
 import RingLoading from './RingLoading';
 import { updateGuest } from '../../Database'
+import { isMobile } from "react-device-detect";
 
 const ContactInfo = (props) => {
     const getEmailFromGuests = () => {
@@ -68,12 +69,24 @@ const ContactInfo = (props) => {
                         style={{marginBottom: '25px', maxWidth: '330px'}}
                         onChange={(e) => setEmail(e.target.value)} 
                     />
-                    <Button
-                        type="primary"   
-                        onClick={submitEmail}                 
-                    >
-                        Submit
-                    </Button>
+                    {!isMobile &&
+                        <Button
+                            type="primary"   
+                            onClick={submitEmail}                 
+                        >
+                            Submit
+                        </Button>
+                    }
+                    {isMobile &&
+                        <div style={{ textAlign: 'right'}}>
+                            <Button
+                                type="primary"   
+                                onClick={submitEmail}                 
+                            >
+                                Submit
+                            </Button>
+                        </div>
+                    }
                 </div>
             }
             {loading && <RingLoading />}

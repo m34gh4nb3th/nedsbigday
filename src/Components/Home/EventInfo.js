@@ -13,16 +13,17 @@ class EventInfo extends React.Component {
         this.state = {};
     }
     render() {
-        const who = this.props.private ? 'Wedding Party & Imediate Family' : 'Everyone';
+        const who = this.props.private ? 'Wedding Party & Immediate Family' : 'Everyone';
         return (
             <div style={{ paddingBottom: '50px'}}>
                 <h3>
                     {this.props.eventName}
-                    {this.props.extra && !this.props.detailsTbd && 
-                        <p style={{ fontSize: 12 }}><i>{this.props.extra}</i></p>
-                    }
+                    
                 </h3>
-                <div style={{ textAlign: 'center'}}>
+                {this.props.extra && !this.props.detailsTbd && 
+                        <p style={{ fontSize: 12, textAlign: 'center', marginTop: '-10px' }}><i>{this.props.extra}</i></p>
+                    }
+                <div style={{ textAlign: 'center', fontSize: 16}}>
                     <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Who?</span> {who} 
                     {isBrowser && 
                         <Divider type="vertical" />
@@ -37,7 +38,7 @@ class EventInfo extends React.Component {
                         <Fragment>
                             <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Where?</span> 
                             {this.props.locationLink && 
-                                <a href={this.props.locationLink}>{this.props.locationName}</a>
+                                <a href={this.props.locationLink} target="_blank">{this.props.locationName}</a>
                             }
                             {!this.props.locationLink && 
                                 this.props.locationName

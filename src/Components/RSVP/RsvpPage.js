@@ -6,6 +6,7 @@ import { capitalize } from '../../utils';
 import RingLoading from './RingLoading';
 import WeddingRSVP from './WeddingRSVP';
 import ContactInfo from './ContactInfo';
+import SongRequests from './SongRequests';
 import { isMobile } from "react-device-detect";
 
 const { Panel } = Collapse;
@@ -50,6 +51,7 @@ const RsvpPage = () => {
     const headerWrapper = {
         paddingLeft: isMobile ? '10px' : '100px', 
         paddingRight: isMobile ? '10px' : '100px', 
+        paddingBottom: '10px',
     }
 
     const pageStyle = {
@@ -63,7 +65,7 @@ const RsvpPage = () => {
         <div style={pageStyle}>
             <div style={headerWrapper}>
                 <h1 style={{marginBottom: '0px'}}>RSVP</h1>
-                <h1 style={{ fontSize: '16px'}}>By February 7th, 2021</h1>
+                <h1 style={{ fontSize: '18px', marginBottom: '0px'}}>By <strong>May 7th, 2021</strong> -- But if you know sooner, please let us know!</h1>
             </div>
             {!thisGuest &&
                 <Row justify="center" style={{marginTop: '50px'}}>
@@ -72,9 +74,9 @@ const RsvpPage = () => {
                         <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appear on your invitation</h3> <br/>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                             <ul>
-                                <li><small>You do not need to enter the Mr./Mrs./Ms. prefix</small></li>
-                                <li><small>If there are two names on your invitation you may enter either</small></li>
-                                <li><small>If there are more than two names you may need to enter them separately</small></li>
+                                <li>You do not need to enter the Mr./Mrs./Ms. prefix</li>
+                                <li>If there are two names on your invitation you may enter either</li>
+                                <li>If there are more than two names you may need to enter them separately</li>
                             </ul>
                         </div>
                     </div>
@@ -124,6 +126,12 @@ const RsvpPage = () => {
                                 thisGuest={thisGuest} 
                                 plusOneGuest={plusOneGuest}
                                 setThisGuest={setThisGuest} />
+                            </Panel>
+                            <Panel header={<h4>Song Requests</h4>} key="4" style={{ borderBottom: '0px'}}>
+                                <SongRequests
+                                thisGuest={thisGuest} 
+                                plusOneGuest={plusOneGuest}
+                                setThisGuest={setThisGuest}/>
                             </Panel>
                         </Collapse>
                     </Col>

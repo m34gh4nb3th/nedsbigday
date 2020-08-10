@@ -22,7 +22,7 @@ class Activities extends React.Component {
             },
             info: {
                 marginBottom: '50px', 
-                width: isMobile ? '100%' : '50%',
+                width: isMobile ? '100%' : '60%',
                 display: 'inline-block',
             }
             
