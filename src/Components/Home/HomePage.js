@@ -31,10 +31,10 @@ class HomePage extends React.Component {
                 {Object.keys(eventData).map( (date, index, arr) => (
                     <div key={date}>
                         <Row justify="center" gutter={4}>
-                            <Col md={{ span: 4 }} xs={{ span: 24}}>
+                            <Col md={{ span: 3 }} xs={{ span: 24}}>
                                 <Date day={date} month="August"/>
                             </Col>
-                            <Col md={{ span: 18 }} xs={{ span: 24}} style={{ paddingLeft: '26px'}}>
+                            <Col md={{ span: 19 }} xs={{ span: 24}} style={{ paddingLeft: '26px'}}>
                                 {eventData[date] && eventData[date].map( event => (
                                     <EventInfo 
                                         eventName = {event.eventName}

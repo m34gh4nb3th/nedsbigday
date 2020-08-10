@@ -10,7 +10,7 @@ const TriviaStart = (props) => {
                 xs={{ span: 24 }} 
                 style={{ textAlign: 'center' }}
             >
-                <h2>How well do you know Ian & Meaghan & Ned?</h2>
+                <h2>How well do you know Ian, Meaghan, and Ned?</h2>
                 <p>Don't worry, we won't share or save the resuls!</p>
                 {!props.loading && 
                     <Button 

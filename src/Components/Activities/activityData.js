@@ -21,7 +21,7 @@ export const activityData = {
             description: <span>
                 <p>Most neighborhoods in Seattle have their own weekly farmers market, many of which operate year round. The Ballard Farmers Market
                     takes place every Sunday until 3:00PM in what has become our favorite neighborhood. You'll find fresh and local produce, meat, dairy, 
-                    and seafood; local goods like spices, wines, soaps, and ceramics; and prepared foods like breads, pastries, pies, and soups. 
+                    and seafood; local goods like spices, wine, soaps, and ceramics; and prepared foods like breads, pastries, pies, and soups. 
                     We recommend coming hungry because you will definitely be tempted to order from the numerous food trucks and vendors 
                     (think hot donuts, fresh tomales, and buttery garlic naan). 
                 </p>
@@ -42,16 +42,16 @@ export const activityData = {
             image: ['/brewery1.png','/brewery2.jpg','/brewery3.jpg'],
             description: <p>The Ballard neighborhood is also very well known for it's selection of breweries. If you feel like making a day of it, you can try
                 all 11 breweries within a one-mile radius and/or participate in their <a href="http://www.visitballard.com/ballardbrewed/">passport program</a>. 
-                A few of our favorites, are Peddler, Rueben's, and Hale's Ales. 
+                A few of our favorites are Peddler, Rueben's, and Hale's Ales. 
             </p>
         },
         {
             title: 'Glasswing and Melrose Market',
             subTitle: 'A couple of our favorite stores in Capitol Hill',
             image: ['/glasswing.jpg','/melrose1.jpg','/melrose2.jpg'],
-            description: <p>Glasswing is hyrid clothing store and greenhouse located in Capitol Hill neighborhood. The store itself is beautiful
+            description: <p>Glasswing is hyrid clothing store and greenhouse located in the Capitol Hill neighborhood. The store itself is beautiful
                 to walk around even if you aren't interested in shopping. Right next door is Melrose Market which has a couple other small shops as 
-                well as a butcher, food market, salad place, and sit down restaurant. Both are also right around the corner from Starbucks Reserve 
+                well as a butcher, food market, salad place, and sit-down restaurant. Both are also right around the corner from Starbucks Reserve 
                 Roastery and Tasting Room. 
             </p>
         },
@@ -60,7 +60,7 @@ export const activityData = {
             subTitle: 'Fremont park with city views',
             image: ['/fremont1.jpg','/fremont2.png','/fremont3.png','/fremont4.jpg'],
             description: <p>This park is truely unique! It sits on the site of a former gasification plant in Fremont on the North Shore of Lake Union.
-                Pick up some wine and snacks or lunch from one of our favorite grocery stores (PCC Community Carket) conveniently located nearby 
+                Pick up some wine and snacks or lunch from one of our favorite grocery stores (PCC Community Market) conveniently located nearby 
                 and enjoy an afternoon picnic by the lake. To get the full Fremont experience while you're there, check out the Fremont Troll, 
                 the neightborhoods of house boats, Theo chocolate factory, Fremont Brewery and/or the Fremont Mischief Distillery!
             </p>
@@ -71,10 +71,10 @@ export const activityData = {
             image: ['/other1.jpg','/other2.png','/other3.png','/other4.jpg'],
             description: <span>
                 <p>We tried to provide a selection of the more unique attractions that we love in Seattle, but there are numerous other more 
-                touristy places you shouldn't rule out exploring while you're here. </p>
+                touristy attractions you shouldn't rule out exploring while you're here. </p>
                 <ul>
                     <li>Everyone is familiar with the Space Needle... While you're at Seattle Center you could also check out the Chihuly Garden and Glass museum.</li>
-                    <li>Walking distance from the Edgewater Hotel is Pike Place Market where you'll find endless shops, vendors, and samples.</li>
+                    <li>Walking distance from the Edgewater Hotel is Pike Place Market where you'll find endless shops, vendors, and free samples.</li>
                     <li>Rather than waiting in line at the original Starbucks in Pike Place we'd recommend visiting the Starbuck Reserve Roastery in Capitol Hill, 
                         where they have specialty roasts and coffe drinks, as well as alcoholic beverages and fresh food options.
                     </li>
@@ -120,9 +120,9 @@ export const activityData = {
             subTitle: 'Downtown',
             image: ['/centennial-park1.jpg','/centennial-park2.jpg','/centennial-park3.jpg','/centennial-park4.png'],
             description: <span>
-                <p>This run/walk option is by far the most convinient to the Edgewater Hotel (and other downtown accomodations). Just step outside and head North along the water  
+                <p>This run/walk option is by far the most convinient to the Edgewater Hotel (and other downtown accommodations). Just step outside and head North along the water  
                     for a flat paved walk/run/bike path that goes on for about 3 miles. Less than a mile from the hotel you'll pass through the Olympic Sculputre Park (which is a 
-                    destination in itself). And on a nice day you'll get views of both the Olympics and Rainier towering over the downtown skyline.
+                    destination in and of itself). And on a nice day you'll get views of both the Olympics and Rainier towering over the downtown skyline.
                 </p>
                 <p>Pro Tip: This is Ian's favorite seal spotting route, so keep your eyes peeled!</p>
             </span>
@@ -181,7 +181,7 @@ export const activityData = {
             subTitle: <span>Cafe <Divider type="vertical" /> Multiple Locations</span>,
             link: "https://uptownespresso.com/",
             image: ['/uptown-espresso1.jpg', '/uptown-espresso2.png'],
-            description: <p>Home of the velvet foam! As the motto states, this place is known for the foamy lattes. We also appreciate the relaxed
+            description: <p>Home of the velvet foam! As the motto states, this place is known for their foamy lattes. We also appreciate the relaxed
                 vibe and funky dark green carpets that make this place a Seattle classic. The Generra (chocolate orange latte) is our favorite!
             </p>
         },
@@ -211,7 +211,7 @@ export const activityData = {
             link: "https://www.pccmarkets.com/",
             image: ['/pcc1.jpg', '/pcc2.png'],
             description: <p>A grocery trip to PCC is an adventure! You might find an interesting fruit you've never heard of, a wine called "The Ned",
-                or creme brulee cheese... They also have an amazing hot bar, salad bar, and dine in eating menu if you're looking for an easy lunch. 
+                or creme brulee cheese... They also have an amazing hot bar, salad bar, and dine-in eating menu if you're looking for an easy lunch. 
                 Don't leave without checking out their amazing baked goods (their scones are our second favorite after Macrina).
             </p>
         },
