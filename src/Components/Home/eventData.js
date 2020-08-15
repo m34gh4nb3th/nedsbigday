@@ -35,7 +35,7 @@ const eventData = {
             private: false,
             locationName: "The Edgewater Hotel, Terrrace Room",
             locationLink: "https://www.edgewaterhotel.com/",
-            time: "5:00PM - 7:00PM",
+            time: "6:00PM - 7:00PM",
             attire: "Semi-Formal"
         },
         {
