@@ -82,7 +82,6 @@ class TriviaQuestion extends React.Component {
             header: { 
                 position: 'absolute',  
                 right: '5%', 
-                transform: 'translate(-50%, -50%)', 
                 textAlign: 'right',
             }
         }
@@ -129,17 +128,17 @@ class TriviaQuestion extends React.Component {
                                         <div className={cardClass}>
                                             <h3 style={{ ...style.header, fontSize: 32, top: '50%' }}>Wrong</h3>
                                             <div style={{ ...style.header, top: '75%'}}>
-                                                <p><strong>Correct Answer:</strong> {this.props.question.correct_answer}</p>
+                                                <p style={{ marginBottom: '0px'}}><strong>Correct Answer:</strong> {this.props.question.correct_answer}</p>
                                                 {this.props.question.explanation && 
                                                     <i>{this.props.question.explanation}</i>
                                                 }
                                             </div>
-                                            <img src="/sad-dog.jpg" width="100%" alt="" style={{opacity: '0.2'}}></img>
+                                            <img src="/sad-dog.png" width="100%" alt="" style={{opacity: '0.2'}}></img>
                                         </div>
                                     }
                                     {this.state.result === 'Correct' &&
                                         <Card onClick={this.makeConfetti} className={cardClass}>
-                                            <h3 style={{ ...style.header, fontSize: 32 }}>Correct!</h3>
+                                            <h3 style={{fontSize: 32 }}>Correct!</h3>
                                             <div  style={{ textAlign: 'center', marginLeft: '90px' }}>
                                                 <Confetti
                                                     config={confettiConfig}
@@ -147,7 +146,7 @@ class TriviaQuestion extends React.Component {
                                                     className="confetti"
                                                 />
                                             </div>
-                                            <div style={{ ...style.header, textAlign: 'center'}}>
+                                            <div style={{textAlign: 'center'}}>
                                                 <p><strong>Answer:</strong> {this.props.question.correct_answer}</p>
                                                 {this.props.question.explanation && 
                                                     <i>{this.props.question.explanation}</i>

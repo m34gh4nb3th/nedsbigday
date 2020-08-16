@@ -20,7 +20,8 @@ const RsvpPage = () => {
     const [ thisGuest, setThisGuest ] = useState(null);
     const [ plusOneGuest, setPlusOneGuest ] = useState(null);
 
-    const searchForGuest = () => {
+    const searchForGuest = (e) => {
+        if (e) e.preventDefault();
         setLoading(!loading);
         setError(null);
         if (!enteredName) {
@@ -80,6 +81,7 @@ const RsvpPage = () => {
                         </div>
                     </div>
                     <div style={{textAlign: 'center'}}>
+                        <form onSubmit={searchForGuest}>
                         <Input
                             placeholder="Your Full Name"
                             value={enteredName} 
@@ -93,6 +95,7 @@ const RsvpPage = () => {
                             Continue
                         </Button>
                         {error && <Alert message={error} type="error" style={{marginTop: '20px'}}/>}
+                        </form>
                     </div>
                     </Col>
                 </Row>
