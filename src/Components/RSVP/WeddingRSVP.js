@@ -41,7 +41,6 @@ const WeddingRSVP = (props) => {
     const handleUpdateGuests = (guests) => {
         //first guest in array is always primary
         //second is the plus one if there is one
-        console.log('updating guests');
         guests.forEach( (guest, index, array) => {
             let gId = guest.id;
             delete guest.id;
@@ -78,7 +77,6 @@ const WeddingRSVP = (props) => {
         }
         //send object to database
         createGuest(newGuest).then(guestId => {
-            console.log('newGuest',guestId);
             //query new guest and update state with new guest
             getGuestById(guestId).then(res => {
                 if (res) props.setPlusOneGuest(res);
@@ -127,7 +125,6 @@ const WeddingRSVP = (props) => {
                     meal: mealResp,
                 }
                 //remove id field before sending to database
-                console.log(updateGuest);
                 guests.push(updateGuest);
                 // add the plus one guest object if there is one
                 if (props.plusOneGuest) {
@@ -137,7 +134,6 @@ const WeddingRSVP = (props) => {
                         attending_reception: recRespPlusOne,
                         meal: mealRespPlusOne,
                     }
-                    console.log(updatePlusOne);
                     guests.push(updatePlusOne);
                 }
                 // send the news to update to the database

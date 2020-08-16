@@ -11,7 +11,6 @@ export const getGuestByName = (name) => {
     const db = firestore.firestore();
     return db.collection("guests").where('full_name', '==', name.toLowerCase()).get().
     then(querySnapshot => {
-        console.log('querySnapshot',querySnapshot);
         return querySnapshot.docs.map(doc => {
             
             return addIdToRecord(doc)
@@ -22,7 +21,6 @@ export const getGuestByName = (name) => {
 
 export const getGuestById = (id) => {
     const db = firestore.firestore();
-    console.log('id',typeof id);
     return db.collection("guests").doc(id).get().then(doc => addIdToRecord(doc));
 }
 

@@ -46,15 +46,6 @@ const eventData = {
             time: "7:00PM - 11:00PM",
             attire: "Semi-Formal"
         },
-        {
-            eventName: "After party?",
-            private: false,
-            locationName: "TBD",
-            locationLink: null,
-            time: "11:00PM - ?",
-            attire: "Whatever",
-            detailsTbd: true
-        },
     ],
     8: [
         {
@@ -70,4 +61,14 @@ const eventData = {
 }
 
 export default eventData;
+
+// {
+//     eventName: "After party?",
+//     private: false,
+//     locationName: "TBD",
+//     locationLink: null,
+//     time: "11:00PM - ?",
+//     attire: "Whatever",
+//     detailsTbd: true
+// },
 

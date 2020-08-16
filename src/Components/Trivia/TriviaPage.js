@@ -34,7 +34,7 @@ class TriviaPage extends React.Component {
             question: null,
             showResults: false,
             score: 0,
-            responses: [],
+            responses: {},
         };
     }
 
@@ -68,10 +68,10 @@ class TriviaPage extends React.Component {
         this.setState( prevState => ({
             progress: 0,
             question: 0,
-            questions: getRandom(prevState.allQuestions,numOfQuestions),
+            questions: getRandom(prevState.allQuestions,numOfQuestions, prevState.responses),
             showResults: false,
             score: 0,
-            responses: [],
+            responses: {},
         }));
     }
 
@@ -87,7 +87,7 @@ class TriviaPage extends React.Component {
             question: prevState.question != null ? prevState.question + 1 : 0,
             score: response.result === 'Correct' ? prevState.score + 1 : prevState.score,
             showResults: lastQuestion,
-            responses: [ ...prevState.responses, response],
+            responses: { ...prevState.responses, [prevState.questions[prevState.question].id] : response},
             loading: lastQuestion,
         }))
         if (lastQuestion) {

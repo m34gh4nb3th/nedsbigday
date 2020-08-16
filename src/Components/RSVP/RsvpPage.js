@@ -74,7 +74,6 @@ const RsvpPage = () => {
                         <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appear on your invitation</h3> <br/>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                             <ul>
-                                <li>You do not need to enter the Mr./Mrs./Ms. prefix</li>
                                 <li>If there are two names on your invitation you may enter either</li>
                                 <li>If there are more than two names you may need to enter them separately</li>
                             </ul>
