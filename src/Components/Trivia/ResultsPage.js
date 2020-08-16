@@ -53,7 +53,7 @@ class ResultsPage extends React.Component {
                         >
                             Try Again
                         </Button>
-                        {this.props.responses.map( response => (
+                        {Object.values(this.props.responses).map( response => (
                             <Card style={{ textAlign: 'left', marginBottom: '10px' }} key={response.question}>
                                 <h3>{response.question}</h3>
                                 {response.result === 'Correct' && 

@@ -74,10 +74,19 @@ class TriviaQuestion extends React.Component {
             this.setState({confetti: false});
         }
     }
+    
+    
 
     render() {
+        const style = {
+            header: { 
+                position: 'absolute',  
+                right: '5%', 
+                textAlign: 'right',
+            }
+        }
         const nextButtonText = this.props.lastQuestion ? 'See Your Final Score' : 'Next';
-        const cardClass = this.state.result === 'Correct' ? 'card-with-shadow card-with-click' : 'card-with-shadow';
+        const cardClass = this.state.result === 'Correct' ? 'card-with-shadow card-with-click' : 'card-with-shadow-wrong';
         return (
             <Row align='center'>
                 <Col md={{ span: 12 }} xs={{ span: 22 }}>
@@ -115,22 +124,36 @@ class TriviaQuestion extends React.Component {
                         <Fragment>
                             <Row style={{minHeight: '200px'}} justify="center" align="middle">
                                 <Col md={{ span: 12 }} xs={{ span: 20 }}>
-                                    <Card onClick={this.makeConfetti} className={cardClass}>
-                                        <h3 style={{ fontSize: 32 }}>{this.state.result}{this.state.result === 'Correct' ? '!' : ''}</h3>
-                                        <div  style={{ textAlign: 'center', marginLeft: '90px' }}>
-                                            <Confetti
-                                                config={confettiConfig}
-                                                active={this.state.confetti}
-                                                className="confetti"
-                                            />
+                                    {this.state.result === 'Wrong' &&
+                                        <div className={cardClass}>
+                                            <h3 style={{ ...style.header, fontSize: 32, top: '50%' }}>Wrong</h3>
+                                            <div style={{ ...style.header, top: '75%'}}>
+                                                <p style={{ marginBottom: '0px'}}><strong>Correct Answer:</strong> {this.props.question.correct_answer}</p>
+                                                {this.props.question.explanation && 
+                                                    <i>{this.props.question.explanation}</i>
+                                                }
+                                            </div>
+                                            <img src="/sad-dog.png" width="100%" alt="" style={{opacity: '0.2'}}></img>
                                         </div>
-                                        <div style={{ textAlign: 'center'}}>
-                                            <p><strong>{this.state.result === 'Wrong' && 'Correct'} Answer:</strong> {this.props.question.correct_answer}</p>
-                                            {this.props.question.explanation && 
-                                                <i>{this.props.question.explanation}</i>
-                                            }
-                                        </div>
-                                    </Card>
+                                    }
+                                    {this.state.result === 'Correct' &&
+                                        <Card onClick={this.makeConfetti} className={cardClass}>
+                                            <h3 style={{fontSize: 32 }}>Correct!</h3>
+                                            <div  style={{ textAlign: 'center', marginLeft: '90px' }}>
+                                                <Confetti
+                                                    config={confettiConfig}
+                                                    active={this.state.confetti}
+                                                    className="confetti"
+                                                />
+                                            </div>
+                                            <div style={{textAlign: 'center'}}>
+                                                <p><strong>Answer:</strong> {this.props.question.correct_answer}</p>
+                                                {this.props.question.explanation && 
+                                                    <i>{this.props.question.explanation}</i>
+                                                }
+                                            </div>
+                                        </Card>
+                                    }    
                                 </Col>
                             </Row>
                             <div style={{ textAlign: 'right', marginTop: '15px' }}>

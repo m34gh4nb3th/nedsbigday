@@ -20,7 +20,8 @@ const RsvpPage = () => {
     const [ thisGuest, setThisGuest ] = useState(null);
     const [ plusOneGuest, setPlusOneGuest ] = useState(null);
 
-    const searchForGuest = () => {
+    const searchForGuest = (e) => {
+        if (e) e.preventDefault();
         setLoading(!loading);
         setError(null);
         if (!enteredName) {
@@ -74,13 +75,13 @@ const RsvpPage = () => {
                         <h3 style={{marginBottom: '0px', textAlign: 'center' }}>Please enter your first and last name as they appear on your invitation</h3> <br/>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                             <ul>
-                                <li>You do not need to enter the Mr./Mrs./Ms. prefix</li>
                                 <li>If there are two names on your invitation you may enter either</li>
                                 <li>If there are more than two names you may need to enter them separately</li>
                             </ul>
                         </div>
                     </div>
                     <div style={{textAlign: 'center'}}>
+                        <form onSubmit={searchForGuest}>
                         <Input
                             placeholder="Your Full Name"
                             value={enteredName} 
@@ -94,6 +95,7 @@ const RsvpPage = () => {
                             Continue
                         </Button>
                         {error && <Alert message={error} type="error" style={{marginTop: '20px'}}/>}
+                        </form>
                     </div>
                     </Col>
                 </Row>

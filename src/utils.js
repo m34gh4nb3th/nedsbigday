@@ -1,12 +1,16 @@
-export const getRandom = (arr, n) => {
+export const getRandom = (arr, n, exclude) => {
     let result = new Array(n);
-    let len = arr.length;
+    let options = arr;
+    if (exclude) {
+        options = arr.filter( q => !exclude[q.id]);
+    }
+    let len = options.length;
     let taken = new Array(len);
     if (n > len)
         throw new RangeError("getRandom: more elements taken than available");
     while (n--) {
         const x = Math.floor(Math.random() * len);
-        result[n] = arr[x in taken ? taken[x] : x];
+        result[n] = options[x in taken ? taken[x] : x];
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
