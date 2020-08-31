@@ -37,14 +37,14 @@ class ActivityLayout extends React.Component {
             }
         }
         return(
-            <Row gutter={8} style={style.row} align="middle">
-                <Col md={{ span: 12 }} xs={{ span: 8 }} order={this.props.titleSide === 'left' ? 1 : 2} >
+            <Row gutter={8} style={style.row} align="middle" justify="center">
+                <Col md={{ span: 12 }} xs={{ span: 24 }} order={(this.props.titleSide === 'left' || isMobile) ? 1 : 2} >
                     <div style={style.titleWrapper}>
                         <h2 style={style.icon}>{this.props.icon}</h2>
                         <h2 style={style.title}>{this.props.title}</h2>
                     </div>
                 </Col>
-                <Col md={{ span: 12 }} xs={{ span: 16 }} order={this.props.titleSide === 'left' ? 2 : 1}>
+                <Col md={{ span: 12 }} xs={{ span: 22 }} order={(this.props.titleSide === 'left' || isMobile) ? 2 : 1}>
                     <div style={style.items}>
                         {this.props.activities && this.props.activities.map( item => 
                             <ActivityItem {...item} align={this.props.titleSide} restaurant={this.props.restaurant} key={item.title}/> 
