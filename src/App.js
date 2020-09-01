@@ -18,6 +18,15 @@ import { Layout } from 'antd';
 
 const { Footer, Content } = Layout;
 
+console.log(`
+  ######     #    ######  ####### #     # ####### #       ####### 
+  #     #   # #   #     #    #    #     # #     # #       #       
+  #     #  #   #  #     #    #    #     # #     # #       #       
+  ######  #     # ######     #    ####### #     # #       #####   
+  #     # ####### #   #      #    #     # #     # #       #       
+  #     # #     # #    #     #    #     # #     # #       #       
+  ######  #     # #     #    #    #     # ####### ####### #######`);
+
 const App = () => (
   <Layout style={{ backgroundColor: 'white' }}>
     <Content style={{ minHeight: '1000px'}}>
