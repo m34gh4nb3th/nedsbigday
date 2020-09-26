@@ -53,10 +53,13 @@ const Travel = () =>  {
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
                         <p>The wedding is being held at the <a href="https://www.edgewaterhotel.com/" target="_blank">Edgewater Hotel</a>.</p>
-                        <p>There are plenty of other hotels as well as Airbnb options in the area.</p>
-                        <br/><br/>
-                        <div style={{textAlign: 'center'}}><i>More details to come</i></div>
-                        
+                        <p>
+                            <strong>Room Block: </strong> 
+                            To access the room block prices use code 
+                            <span style={{ fontFamily: 'Montserrat', fontSize: 18, color: '#86b59f', marginBottom: '-10px'}}> 21T5P7 </span> 
+                            in the "group code" section when booking your room.
+                        </p>
+                        <p>If you are looking for alternative accomodations, there are plenty of other hotels and Airbnbs in the area.</p>                        
                     </Col>
                 </Row>
             </Card>
