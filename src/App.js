@@ -5,9 +5,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import NavBar from './Components/NavBar';
-import FooterCredits from './Components/FooterCredits';
-import Header from './Components/Header';
+import FooterCredits from './Components/Common/FooterCredits';
+import Header from './Components/Common/Header';
 import HomePage from './Components/Home/HomePage';
 import RsvpPage from './Components/RSVP/RsvpPage';
 import Travel from './Components/Pages/Travel';
@@ -32,7 +31,6 @@ const App = () => (
     <Content style={{ minHeight: '1000px'}}>
       <Router>
         <Header />
-        <NavBar />
         <Switch>
           <Route exact path="/">
             <HomePage />

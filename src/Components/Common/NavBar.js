@@ -16,7 +16,7 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <Menu mode="horizontal" style={{ textAlign: 'center', borderBottom: '0px'}} defaultSelectedKeys={[this.state.selectedKey]}>
+            <Menu onClick={this.props.onChangePage} mode={isMobile ? "vertical" : "horizontal"} style={{ textAlign: 'center', borderBottom: '0px', borderRight: '0px'}} defaultSelectedKeys={[this.state.selectedKey]}>
                 <Menu.Item key="home">
                     <Link to="/">Home</Link>
                 </Menu.Item>
