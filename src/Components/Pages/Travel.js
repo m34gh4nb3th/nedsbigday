@@ -13,7 +13,13 @@ const style = {
         textAlign: 'center',
     },
     category: {
-        fontSize: isMobile ? '20px' : '30px'
+        fontSize: isMobile ? '20px' : '30px',
+    },
+    code: {
+        fontSize: '16px',
+        fontFamily: 'Montserrat', 
+        color: '#86b59f', 
+        marginBottom: '-10px',
     },
     popover: {
         width: isMobile ? '90%' : '40%',
@@ -56,7 +62,7 @@ const Travel = () =>  {
                         <p>
                             <strong>Room Block: </strong> 
                             To access the room block prices use code 
-                            <span style={{ fontFamily: 'Montserrat', fontSize: 18, color: '#86b59f', marginBottom: '-10px'}}> 21T5P7 </span> 
+                            <span style={style.code}> 21T5P7 </span> 
                             in the "group code" section when booking your room.
                         </p>
                         <p>If you are looking for alternative accomodations, there are plenty of other hotels and Airbnbs in the area.</p>                        

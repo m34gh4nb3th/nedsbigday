@@ -21,7 +21,7 @@ class HomePage extends React.Component {
         const pageStyle = {
             paddingLeft: isMobile ? '10px' : '100px', 
             paddingRight: isMobile ? '10px' : '100px', 
-            paddingTop: '50px', 
+            paddingTop: isMobile ? '20px' : '50px', 
             paddingBottom: isMobile ? '50px' : '100px' 
         }
         
