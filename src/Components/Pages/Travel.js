@@ -65,7 +65,7 @@ const Travel = () =>  {
                             <span style={style.code}> 21T5P7 </span> 
                             in the "group code" section when booking your room.
                         </p>
-                        <p>If you are looking for alternative accomodations, there are plenty of other hotels and Airbnbs in the area.</p>                        
+                        <p>If you are looking for alternative accommodations, there are plenty of other hotels and Airbnbs in the area.</p>                        
                     </Col>
                 </Row>
             </Card>
