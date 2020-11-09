@@ -23,7 +23,6 @@ class HomePage extends React.Component {
     
 
     render() {
-
         const pageStyle = {
             paddingLeft: isMobile ? '10px' : '100px', 
             paddingRight: isMobile ? '10px' : '100px', 
@@ -67,11 +66,8 @@ class HomePage extends React.Component {
                 title={<h2 style={{paddingTop: 10}}>Change of Plans</h2>}
                 visible={this.state.showModal}
                 onOk={handleCancel}
-                footer={[
-                    <Button key="submit" type="primary" onClick={handleCancel}>
-                    Okay
-                    </Button>,
-                ]}
+                onCancel={handleCancel}
+                footer={[<Button key="submit" type="primary" onClick={handleCancel}>Okay</Button>,]}
                 >
                     <p>
                         After careful consideration, we have come to the difficult decision to downsize the wedding. 
