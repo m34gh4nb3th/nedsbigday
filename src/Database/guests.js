@@ -12,8 +12,9 @@ export const getGuestByName = (name) => {
     return db.collection("guests").where('full_name', '==', name.toLowerCase()).get().
     then(querySnapshot => {
         return querySnapshot.docs.map(doc => {
-            
-            return addIdToRecord(doc)
+            const record = addIdToRecord(doc)
+            if (!record.new_list) throw Error();
+            return record
         });
     })
     .catch(err => err);

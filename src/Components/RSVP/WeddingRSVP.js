@@ -13,28 +13,17 @@ const yesNoOptions = [
     { label: 'No', value: 'No' },
 ];
 
-const mealOptions = [
-    { label: 'Salmon (GF)', value: 'Salmon' },
-    { label: 'Beef (GF)', value: 'Beef' },
-    { label: 'Vegetarian', value: 'Vegetarian' },
-];
-
 const WeddingRSVP = (props) => {
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState(null);
     const [ addPlusOne, setAddPlusOne ] = useState(false);
     const [ plusOneName, setPlusOneName ] = useState(null);
-    const [ cerResp, setCerResp ] = useState(props.thisGuest.attending_ceremony || null);
-    const [ cerRespPlusOne, setCerRespPlusOne ] = useState((props.plusOneGuest ? props.plusOneGuest.attending_ceremony : null) || null);
     const [ recResp, setRecResp ] = useState(props.thisGuest.attending_reception);
     const [ recRespPlusOne, setRecRespPlusOne ] = useState(props.plusOneGuest ? props.plusOneGuest.attending_reception : null);
-    const [ mealResp, setMealResp ] = useState(props.thisGuest.meal || null);
-    const [ mealRespPlusOne, setMealRespPlusOne ] = useState((props.plusOneGuest ? props.plusOneGuest.meal : null) || null);
-    const ceremony = props.thisGuest.invited_ceremony || (props.plusOneGuest && props.plusOneGuest.invited_ceremony);
 
     const missingValues = () => {
-        if (((props.plusOneGuest || plusOneName) && ((ceremony &&!cerRespPlusOne) || !recRespPlusOne || (recRespPlusOne == 'Yes' && !mealRespPlusOne)))
-            || ((ceremony && !cerResp) || !recResp || (recResp == 'Yes' && !mealResp))) return true;
+        if (((props.plusOneGuest || plusOneName) && ( !recRespPlusOne))
+            || ( !recResp )) return true;
         else return false;
     }
     
@@ -68,12 +57,9 @@ const WeddingRSVP = (props) => {
         //new guest object
         let newGuest = {
             full_name: plusOneName.toLowerCase(),
-            invited_ceremony: ceremony,
             unknown_plus_one: false,
             known_guest: db.doc(`/guests/${props.thisGuest.id}`),
-            attending_ceremony: ceremony ? cerRespPlusOne : null,
             attending_reception: recRespPlusOne,
-            meal: mealRespPlusOne,
         }
         //send object to database
         createGuest(newGuest).then(guestId => {
@@ -85,10 +71,8 @@ const WeddingRSVP = (props) => {
             });
             let updateGuest = {
                 ...props.thisGuest,
-                attending_ceremony: cerResp,
                 attending_reception: recResp,
                 unknown_plus_one: false,
-                meal: mealResp,
                 known_guest: db.doc(`/guests/${guestId}`)
             }
             //update original guest RSVP and plus one info
@@ -120,9 +104,7 @@ const WeddingRSVP = (props) => {
                 let guests = [];
                 let updateGuest = {
                     ...props.thisGuest,
-                    attending_ceremony: cerResp,
                     attending_reception: recResp,
-                    meal: mealResp,
                 }
                 //remove id field before sending to database
                 guests.push(updateGuest);
@@ -130,9 +112,7 @@ const WeddingRSVP = (props) => {
                 if (props.plusOneGuest) {
                     let updatePlusOne = {
                         ...props.plusOneGuest,
-                        attending_ceremony: cerRespPlusOne,
                         attending_reception: recRespPlusOne,
-                        meal: mealRespPlusOne,
                     }
                     guests.push(updatePlusOne);
                 }
@@ -143,14 +123,9 @@ const WeddingRSVP = (props) => {
         
     }
 
-    const title = ceremony ? 'Please let us know which events you will be able to attend' : 'Will you be able to join us for our Wedding Reception?';
-    const thisGuestLocked = (props.thisGuest.meal || props.thisGuest.attending_reception === 'No') 
-                            && (props.thisGuest.attending_ceremony || !ceremony) 
-                            && props.thisGuest.attending_reception;
-    const plusOneLocked = props.plusOneGuest 
-                            && (props.plusOneGuest.meal || props.plusOneGuest.attending_reception) 
-                            && (props.plusOneGuest.attending_ceremony || !ceremony) 
-                            && props.plusOneGuest.attending_reception;
+    const title = 'We hope you can join us for our wedding celebration on August 7th!'
+    const thisGuestLocked = props.thisGuest.attending_reception;
+    const plusOneLocked = props.plusOneGuest && props.plusOneGuest.attending_reception;
     const allLocked = thisGuestLocked && (plusOneLocked || (!props.plusOneGuest && !addPlusOne));
     const style = {
         thisGuestCard: {
@@ -178,19 +153,8 @@ const WeddingRSVP = (props) => {
                     <Card style={style.thisGuestCard}>
                         <h3 style={{textAlign: 'left', marginTop: '-12px'}}>{capitalize(props.thisGuest.full_name)}</h3>
                         <Row style={{paddingTop: '20px'}}>
-                            {ceremony && 
-                                <Col span={12}>
-                                    <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony:</h3>
-                                    <Radio.Group 
-                                    options={yesNoOptions} 
-                                    onChange={(e) => setCerResp(e.target.value)} 
-                                    value={cerResp} 
-                                    style={{ marginLeft: '10px'}}
-                                    disabled={props.thisGuest.attending_ceremony}/>
-                                </Col>  
-                            }
                             <Col span={12}>
-                                <h3 style={{textAlign: 'left', display: 'inline'}}>Reception:</h3>
+                                <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony & Reception:</h3>
                                 <Radio.Group 
                                 
                                 options={yesNoOptions} 
@@ -199,15 +163,6 @@ const WeddingRSVP = (props) => {
                                 style={{ marginLeft: '10px'}}
                                 disabled={props.thisGuest.attending_reception}/>
                             </Col>
-                        </Row>
-                        <Row style={{paddingTop: '20px'}}>
-                            <h3 style={{textAlign: 'left', display: 'inline'}}>Meal Selection:</h3>
-                            <Radio.Group 
-                            options={mealOptions} 
-                            onChange={(e) => setMealResp(e.target.value)} 
-                            value={mealResp} 
-                            style={{ marginLeft: '10px'}}
-                            disabled={props.thisGuest.meal || props.thisGuest.attending_reception === 'No'}/>
                         </Row>
                     </Card>
                     {props.thisGuest.unknown_plus_one && !addPlusOne && 
@@ -230,19 +185,8 @@ const WeddingRSVP = (props) => {
                                 </div>
                             }
                             <Row style={{paddingTop: '20px'}}>
-                                {ceremony && 
-                                    <Col span={12}>
-                                        <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony:</h3>
-                                        <Radio.Group 
-                                        options={yesNoOptions} 
-                                        onChange={(e) => setCerRespPlusOne(e.target.value)} 
-                                        value={cerRespPlusOne} 
-                                        style={{ marginLeft: '10px'}}
-                                        disabled={props.plusOneGuest && props.plusOneGuest.attending_ceremony}/>
-                                    </Col>  
-                                }
                                 <Col span={12}>
-                                    <h3 style={{textAlign: 'left', display: 'inline'}}>Reception:</h3>
+                                    <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony & Reception:</h3>
                                     <Radio.Group 
                                     options={yesNoOptions} 
                                     onChange={(e) => setRecRespPlusOne(e.target.value)} 
@@ -250,15 +194,6 @@ const WeddingRSVP = (props) => {
                                     style={{ marginLeft: '10px'}}
                                     disabled={props.plusOneGuest && props.plusOneGuest.attending_reception}/>
                                 </Col>
-                            </Row>
-                            <Row style={{paddingTop: '20px'}}>
-                                <h3 style={{textAlign: 'left', display: 'inline'}}>Meal Selection:</h3>
-                                <Radio.Group 
-                                options={mealOptions} 
-                                onChange={(e) => setMealRespPlusOne(e.target.value)} 
-                                value={mealRespPlusOne} 
-                                style={{ marginLeft: '10px'}}
-                                disabled={props.plusOneGuest && (props.plusOneGuest.meal || props.plusOneGuest.attending_reception === 'No')}/>
                             </Row>
                         </Card>
                     }

@@ -10,7 +10,7 @@ export const activityData = {
             description: <span>
                 <p>Although you can take a car on the ferry, it's really unnecesaary if you just want to explore the downtown Bainbrige area.
                     Here you can visit wine tasting rooms, breweries, quaint shops, and restaurants all on foot! Plus the ferry is walking distance
-                    from the Edgewater Hotel. The Harbour Public House is our favorite waterfront restaurant on the island. 
+                    from downtown Seattle. The Harbour Public House is our favorite waterfront restaurant on the island. 
                 </p>
             </span>
         },
@@ -74,7 +74,7 @@ export const activityData = {
                 touristy attractions you shouldn't rule out exploring while you're here. </p>
                 <ul>
                     <li>Everyone is familiar with the Space Needle... While you're at Seattle Center you could also check out the Chihuly Garden and Glass museum.</li>
-                    <li>Walking distance from the Edgewater Hotel is Pike Place Market where you'll find endless shops, vendors, and free samples.</li>
+                    <li>Walking distance from the Charter Hotel is Pike Place Market where you'll find endless shops, vendors, and free samples.</li>
                     <li>Rather than waiting in line at the original Starbucks in Pike Place we'd recommend visiting the Starbuck Reserve Roastery in Capitol Hill, 
                         where they have specialty roasts and coffe drinks, as well as alcoholic beverages and fresh food options.
                     </li>
@@ -120,7 +120,7 @@ export const activityData = {
             subTitle: 'Downtown',
             image: ['/centennial-park1.jpg','/centennial-park2.jpg','/centennial-park3.jpg','/centennial-park4.png'],
             description: <span>
-                <p>This run/walk option is by far the most convinient to the Edgewater Hotel (and other downtown accommodations). Just step outside and head North along the water  
+                <p>This run/walk option is by far the most convinient to downtown accommodations. Just make your way down to Alaska Way and head North along the water  
                     for a flat paved walk/run/bike path that goes on for about 3 miles. Less than a mile from the hotel you'll pass through the Olympic Sculputre Park (which is a 
                     destination in and of itself). And on a nice day you'll get views of both the Olympics and Rainier towering over the downtown skyline.
                 </p>
