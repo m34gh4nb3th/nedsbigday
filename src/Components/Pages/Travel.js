@@ -58,13 +58,10 @@ const Travel = () =>  {
                         <h2 style={style.category}>Hotel</h2>
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
-                        <p>The wedding is being held at the <a href="https://www.edgewaterhotel.com/" target="_blank">Edgewater Hotel</a>.</p>
-                        <p>
-                            <strong>Room Block: </strong> 
-                            To access the room block prices use code 
-                            <span style={style.code}> 21T5P7 </span> 
-                            in the "group code" section when booking your room.
-                        </p>
+                        <p style={{marginBottom: 0}}>We have arranged a room block at <a href="https://www.thecharterseattle.com/" target="_blank">The Charter Hotel</a>.</p>
+                        <p><i>NOTE: Rooms must be reserved by June 14, 2021 to be eligible for the reduced room rate</i></p>
+                        <p><strong>Call: </strong> Reserve your room over the phone by calling (206)256-7500 and mentioning you are part of the Meaghan & Ian wedding group.</p>
+                        <p><strong>Online: </strong> <i>Booking link coming soon!</i></p>
                         <p>If you are looking for alternative accommodations, there are plenty of other hotels and Airbnbs in the area.</p>                        
                     </Col>
                 </Row>
@@ -76,7 +73,7 @@ const Travel = () =>  {
                         <h2 style={style.category}>Other</h2>
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
-                        <p>There is parking available for $52 per day at the Edgewater Hotel should you choose to rent a car or drive.</p>
+                        <p>There is parking available for $55 per day at the Charter Hotel should you choose to rent a car or drive.</p>
                         <p>The hotel is conveniently located downtown so you certainly do not need a car to get around and explore the city.</p>
                         <p>The city has great bus system and a couple (electric) bike rental companies if you want to leave the downtown area.</p>
                     </Col>

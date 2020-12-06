@@ -13,24 +13,15 @@ class EventInfo extends React.Component {
         this.state = {};
     }
     render() {
-        const who = this.props.private ? 'Wedding Party & Immediate Family' : 'Everyone';
         return (
             <div style={{ paddingBottom: '50px'}}>
                 <h3>
                     {this.props.eventName}
-                    
                 </h3>
-                {this.props.extra && !this.props.detailsTbd && 
+                {this.props.extra && 
                         <p style={{ fontSize: 12, textAlign: 'center', marginTop: '-10px' }}><i>{this.props.extra}</i></p>
                     }
                 <div style={{ textAlign: 'center', fontSize: 16}}>
-                    <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Who?</span> {who} 
-                    {isBrowser && 
-                        <Divider type="vertical" />
-                    }
-                    {isMobile && 
-                        <br />
-                    }
                     {this.props.detailsTbd &&
                         <i>Details to come</i>
                     }
