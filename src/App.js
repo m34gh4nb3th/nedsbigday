@@ -25,9 +25,10 @@ console.log(`
   #     # ####### #   #      #    #     # #     # #       #       
   #     # #     # #    #     #    #     # #     # #       #       
   ######  #     # #     #    #    #     # ####### ####### #######`);
-
+//f7fffb
+//faf6f2
 const App = () => (
-  <Layout style={{ backgroundColor: 'white' }}>
+  <Layout style={{ backgroundColor: '#fffdfc' }}>
     <Content style={{ minHeight: '1000px'}}>
       <Router>
         <Header />
@@ -53,7 +54,7 @@ const App = () => (
         </Switch>
       </Router>
     </Content>
-    <Footer style={{ backgroundColor: 'white' }}> <FooterCredits/> </Footer>
+    <Footer style={{ backgroundColor: '#fffdfc' }}> <FooterCredits/> </Footer>
   </Layout>
 );
 
