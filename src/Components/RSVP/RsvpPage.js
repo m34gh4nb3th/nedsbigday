@@ -66,7 +66,7 @@ const RsvpPage = () => {
         <div style={pageStyle}>
             <div style={headerWrapper}>
                 <h1 style={{marginBottom: '0px'}}>RSVP</h1>
-                <h1 style={{ fontSize: '18px', marginBottom: '0px'}}>By <strong>May 7th, 2021</strong> -- But if you know sooner, please let us know!</h1>
+                <h1 style={{ fontSize: '18px', marginBottom: '0px'}}>By <strong style={{color: '#525252'}}>May 7th, 2021</strong> -- But if you know sooner, please let us know!</h1>
             </div>
             {!thisGuest &&
                 <Row justify="center" style={{marginTop: '50px'}}>
