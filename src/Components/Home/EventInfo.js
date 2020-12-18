@@ -27,7 +27,7 @@ class EventInfo extends React.Component {
                     }
                     {!this.props.detailsTbd &&
                         <Fragment>
-                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Where?</span> 
+                            <strong style={{paddingRight: '10px'}}>Where?</strong> 
                             {this.props.locationLink && 
                                 <a href={this.props.locationLink} target="_blank">{this.props.locationName}</a>
                             }
@@ -40,14 +40,14 @@ class EventInfo extends React.Component {
                             {isMobile && 
                                 <br />
                             }
-                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>When?</span> {this.props.time}
+                            <strong style={{paddingRight: '10px'}}>When?</strong> {this.props.time}
                             {isBrowser && 
                                 <Divider type="vertical" />
                             }
                             {isMobile && 
                                 <br />
                             }
-                            <span style={{ fontFamily: 'Montserrat', paddingRight: '10px'}}>Wear?</span> {this.props.attire}
+                            <strong style={{paddingRight: '10px'}}>Wear?</strong> {this.props.attire}
                         </Fragment>
                     }
                 </div>

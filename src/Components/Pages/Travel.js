@@ -58,11 +58,16 @@ const Travel = () =>  {
                         <h2 style={style.category}>Hotel</h2>
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
-                        <p style={{marginBottom: 0}}>We have arranged a room block at <a href="https://www.thecharterseattle.com/" target="_blank">The Charter Hotel</a>.</p>
-                        <p><i>NOTE: Rooms must be reserved by June 14, 2021 to be eligible for the reduced room rate</i></p>
-                        <p><strong>Call: </strong> Reserve your room over the phone by calling (206)256-7500 and mentioning you are part of the Meaghan & Ian wedding group.</p>
-                        <p><strong>Online: </strong> <i>Booking link coming soon!</i></p>
-                        <p>If you are looking for alternative accommodations, there are plenty of other hotels and Airbnbs in the area.</p>                        
+                        <p style={{marginBottom: 0}}>We have arranged a room block at <a href="https://www.thecharterseattle.com/" target="_blank">The Charter Hotel</a> in downtown Seattle.</p>
+                        <br/><p><strong>Details:</strong></p>
+                        <li>
+                            <ul>Arrival date: August 6th, 2021</ul>
+                            <ul>Departure date: August 8th, 2021</ul>
+                            <ul><i>Rooms must be reserved by <strong>June 14, 2021</strong> to be eligible for the reduced room rate</i></ul>
+                        </li>
+                        <p><strong>Call: </strong> Reserve your room over the phone by calling (206) 256-7500 and mentioning you are part of the "Crowley/Thomas Wedding Room Block".</p>
+                        <p><strong>Online: </strong> <a href="http://group.curiocollection.com/qzcam" target="_blank">Click here</a> to reserve your room online.</p>
+                        <p>If you are looking for alternative accommodations, there are plenty of other hotels and Airbnbs in the area. Don't hesitate to reach out to us for recommendations!</p>                        
                     </Col>
                 </Row>
             </Card>
@@ -73,6 +78,8 @@ const Travel = () =>  {
                         <h2 style={style.category}>Other</h2>
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
+                        <p style={{marginBottom: '0px'}}>We will coordinate shuttles for day-of transportation between the hotel and the venues. </p>
+                        <p style={{textAlign: 'center'}}><i>Details to come</i></p>
                         <p>There is parking available for $55 per day at the Charter Hotel should you choose to rent a car or drive.</p>
                         <p>The hotel is conveniently located downtown so you certainly do not need a car to get around and explore the city.</p>
                         <p>The city has great bus system and a couple (electric) bike rental companies if you want to leave the downtown area.</p>

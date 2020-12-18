@@ -33,6 +33,11 @@ code {
 }
 
 @font-face {
+  font-family: 'Montserrat-bold';
+  src: local('Montserrat-bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'Meddon';
   src: local('Meddon'), url(./fonts/Meddon-Regular.ttf) format('truetype');
 }
