@@ -46,6 +46,7 @@ class HomePage extends React.Component {
                                         attire = {event.attire}
                                         key={event.eventName}
                                         detailsTbd={event.detailsTbd}
+                                        gap={event.gap}
                                     />
                                 ))}
                             </Col>
