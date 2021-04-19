@@ -1,7 +1,7 @@
 const eventData = {
     6: [
         {
-            eventName: "Rehersal Dinner",
+            eventName: "Rehearsal Dinner",
             extra: "Wedding Party & Immediate Family",
             locationName: "Sawyer",
             locationLink: "http://sawyerseattle.com/",
