@@ -63,6 +63,14 @@ const RsvpPage = () => {
         paddingBottom: isMobile ? '50px' : '100px' 
     }
 
+    const getOpenTabs = () => {
+        if (thisGuest.attending_reception && (plusOneGuest.attending_reception || !plusOneGuest)) {
+            return ['2']
+        } else {
+            return ['1', '2']
+        }
+    }
+
     return (
         <div style={pageStyle}>
             <div style={headerWrapper}>
@@ -108,7 +116,7 @@ const RsvpPage = () => {
                         <Collapse
                             bordered={false}
                             style={{background: 'transparent'}}
-                            defaultActiveKey={['1']}
+                            defaultActiveKey={getOpenTabs()}
                             expandIcon={({ isActive, disabled }) => 
                                 <CaretRightOutlined 
                                 rotate={isActive ? 90 : 0} 
@@ -121,9 +129,12 @@ const RsvpPage = () => {
                                 setPlusOneGuest={setPlusOneGuest}
                                 setThisGuest={setThisGuest}/>   
                             </Panel>
-                            <Panel header={<h4 style={{color: '#bcd4c9'}}>Other Events <small>(coming soon)</small></h4>} key="2" disabled style={{ borderBottom: '0px'}}>
-                                <OtherRSVP thisGuest={thisGuest} 
-                                plusOneGuest={plusOneGuest} />
+                            <Panel header={<h4>Other Events</h4>} key="2" style={{ borderBottom: '0px'}}>
+                                <OtherRSVP 
+                                thisGuest={thisGuest} 
+                                plusOneGuest={plusOneGuest} 
+                                setPlusOneGuest={setPlusOneGuest}
+                                setThisGuest={setThisGuest}/>
                             </Panel>
                             <Panel header={<h4>Contact Info</h4>} key="3" style={{ borderBottom: '0px'}}>
                                 <ContactInfo 
