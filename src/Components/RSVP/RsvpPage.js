@@ -5,6 +5,7 @@ import { getGuestByName, addIdToRecord } from '../../Database';
 import { capitalize } from '../../utils';
 import RingLoading from './RingLoading';
 import WeddingRSVP from './WeddingRSVP';
+import OtherRSVP from './OtherRSVP';
 import ContactInfo from './ContactInfo';
 import SongRequests from './SongRequests';
 import { isMobile } from "react-device-detect";
@@ -121,7 +122,8 @@ const RsvpPage = () => {
                                 setThisGuest={setThisGuest}/>   
                             </Panel>
                             <Panel header={<h4 style={{color: '#bcd4c9'}}>Other Events <small>(coming soon)</small></h4>} key="2" disabled style={{ borderBottom: '0px'}}>
-                                <ContactInfo/>
+                                <OtherRSVP thisGuest={thisGuest} 
+                                plusOneGuest={plusOneGuest} />
                             </Panel>
                             <Panel header={<h4>Contact Info</h4>} key="3" style={{ borderBottom: '0px'}}>
                                 <ContactInfo 
