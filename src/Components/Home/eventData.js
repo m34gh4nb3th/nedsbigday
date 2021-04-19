@@ -22,10 +22,16 @@ const eventData = {
     7: [
         {
             eventName: "Ceremony",
-            locationName: "Parson's Garden",
-            locationLink: "http://www.seattle.gov/parks/find/parks/parsons-gardens",
-            time: "3:00PM - 4:00PM",
+            locationName: "Gates Amphitheater",
+            locationLink: "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+            time: "2:00PM - 3:00PM",
             attire: "Semi-Formal"
+        },
+        {
+            eventName: "Not-so-Catholic Gap",
+            extra: "Wedding party and family pictures in the Sculpture park",
+            time: "3:00PM - 6:00PM",
+            gap: true
         },
         {
             eventName: "Cocktail Hour",
