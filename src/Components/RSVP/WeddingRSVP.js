@@ -35,8 +35,22 @@ const WeddingRSVP = (props) => {
             delete guest.id;
             updateGuest(gId, guest).then( good => {
                 if (good) {
-                    if (index === 0) props.setThisGuest(guest);
-                    else props.setPlusOneGuest(guest);
+                    if (index === 0) {
+                        getGuestById(gId).then(res => {
+                            if (res) props.setThisGuest(res);
+                        }).catch(err => {
+                            console.log('err',err);
+                        });
+                        //props.setThisGuest(guest);
+                    }
+                    else {
+                        getGuestById(gId).then(res => {
+                            if (res) props.setPlusOneGuest(res);
+                        }).catch(err => {
+                            console.log('err',err);
+                        });
+                        //props.setPlusOneGuest(guest);
+                    }
                     if (index === array.length - 1) {
                         setLoading(false);
                         notification.open({
