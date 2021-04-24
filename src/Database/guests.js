@@ -9,8 +9,8 @@ export const addIdToRecord = (record) => {
 
 export const getGuestByName = (name) => {
     const db = firestore.firestore();
-    return db.collection("guests").where('full_name', '==', name.toLowerCase()).get().
-    then(querySnapshot => {
+    return db.collection("guests").where('full_name', '==', name.toLowerCase()).get()
+    .then(querySnapshot => {
         return querySnapshot.docs.map(doc => {
             const record = addIdToRecord(doc)
             if (!record.new_list) throw Error();

@@ -64,7 +64,7 @@ const RsvpPage = () => {
     }
 
     const getOpenTabs = () => {
-        if (thisGuest.attending_reception && (plusOneGuest.attending_reception || !plusOneGuest)) {
+        if (thisGuest.attending_reception && (plusOneGuest?.attending_reception || !plusOneGuest)) {
             return ['2']
         } else {
             return ['1', '2']
