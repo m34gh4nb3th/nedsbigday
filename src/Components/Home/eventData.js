@@ -10,14 +10,14 @@ const eventData = {
         {
             eventName: "Rehearsal Dinner",
             extra: "Wedding Party & Immediate Family",
-            locationName: "Conversation Courtyard at the Thompson Hotel",
+            locationName: "The Thompson Hotel, Conversation Courtyard",
             locationLink: "https://www.thompsonhotels.com/hotels/washington/seattle/thompson-seattle/eat-and-drink/conversation",
             time: "6:00PM - 8:00PM",
             attire: "Dressy Casual",
         },
         {
             eventName: "Welcome Happy Hour",
-            locationName: "Conversation Courtyard at the Thompson Hotel",
+            locationName: "The Thompson Hotel, Conversation Courtyard",
             locationLink: "https://www.thompsonhotels.com/hotels/washington/seattle/thompson-seattle/eat-and-drink/conversation",
             time: "8:00PM - 10:00PM",
             attire: "Casual",
