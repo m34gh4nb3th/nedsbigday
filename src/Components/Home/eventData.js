@@ -1,22 +1,26 @@
 const eventData = {
     6: [
         {
+            eventName: "Rehearsal",
+            extra: "Wedding Party & Immediate Family",
+            locationName: "Gates Amphitheater",
+            locationLink: "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+            time: "5:00PM",
+        },
+        {
             eventName: "Rehearsal Dinner",
             extra: "Wedding Party & Immediate Family",
-            locationName: "Sawyer",
-            locationLink: "http://sawyerseattle.com/",
+            locationName: "The Thompson Hotel, Conversation Courtyard",
+            locationLink: "https://www.thompsonhotels.com/hotels/washington/seattle/thompson-seattle/eat-and-drink/conversation",
             time: "6:00PM - 8:00PM",
             attire: "Dressy Casual",
-            detailsTbd: true,
         },
         {
             eventName: "Welcome Happy Hour",
-            locationName: "King's Hardware",
-            //extra: "See website for drink and food menu and pricing",
-            locationLink: "http://www.kingsballard.com/",
+            locationName: "The Thompson Hotel, Conversation Courtyard",
+            locationLink: "https://www.thompsonhotels.com/hotels/washington/seattle/thompson-seattle/eat-and-drink/conversation",
             time: "8:00PM - 10:00PM",
             attire: "Casual",
-            detailsTbd: true,
         },
     ],
     7: [
@@ -35,7 +39,6 @@ const eventData = {
         },
         {
             eventName: "Cocktail Hour",
-            extra: "Don't forget your ID!",
             locationName: "Almquist Family Winery, Greenhouse",
             locationLink: "http://www.almquistfamily.com/",
             time: "6:00PM - 7:00PM",

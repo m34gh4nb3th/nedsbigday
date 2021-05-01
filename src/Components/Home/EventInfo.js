@@ -49,13 +49,17 @@ class EventInfo extends React.Component {
                                 <br />
                             }
                             <strong style={{paddingRight: '10px'}}>When?</strong> {this.props.time}
-                            {isBrowser && 
-                                <Divider type="vertical" />
+                            {this.props.attire && 
+                                <>
+                                {isBrowser && 
+                                    <Divider type="vertical" />
+                                }
+                                {isMobile && 
+                                    <br />
+                                }
+                                <strong style={{paddingRight: '10px'}}>Wear?</strong> {this.props.attire}
+                                </>
                             }
-                            {isMobile && 
-                                <br />
-                            }
-                            <strong style={{paddingRight: '10px'}}>Wear?</strong> {this.props.attire}
                         </Fragment>
                     }
                     {this.props.gap && 
