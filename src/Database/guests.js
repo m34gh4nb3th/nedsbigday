@@ -39,3 +39,21 @@ export const createGuest = (guest) => {
     .catch(err => err);
 }
 
+export const getAllGuests = () => {
+    return new Promise((resolve, reject) => {
+        const db = firestore.firestore();
+        const guestsRef = db.collection("guests");
+        guestsRef.where("new_list", "==", true).get().then(querySnapshot => {
+            const guests = []
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                guests.push({...doc.data()})
+            });
+            console.log('guests', guests)
+            resolve(guests)
+        })
+    })
+    
+}
+

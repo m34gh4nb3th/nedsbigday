@@ -10,6 +10,7 @@ import Header from './Components/Common/Header';
 import HomePage from './Components/Home/HomePage';
 import RsvpPage from './Components/RSVP/RsvpPage';
 import Travel from './Components/Pages/Travel';
+import RSVPList from './Components/Pages/RSVPList';
 import ActivitiesPage from './Components/Activities/ActivitiesPage';
 import TriviaPage from './Components/Trivia/TriviaPage';
 import Registry from './Components/Pages/Registry';
@@ -50,6 +51,9 @@ const App = () => (
           </Route>
           <Route path="/registry">
             <Registry />
+          </Route>
+          <Route path="/topsecret">
+            <RSVPList />
           </Route>
         </Switch>
       </Router>
