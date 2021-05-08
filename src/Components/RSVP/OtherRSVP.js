@@ -89,6 +89,7 @@ const OtherRSVP = (props) => {
 
     const invitedRehearsalDinner = props.thisGuest.invited_ceremony
     const cardStyle = {borderColor: '#9bc2b6', margin: '20px',backgroundColor: 'transparent' }
+    const colSize = 24 
     return (
         <div>
             <h3>See home page for event times and details</h3>
@@ -98,7 +99,7 @@ const OtherRSVP = (props) => {
                     <Card style={cardStyle}>
                         <h3 style={{textAlign: 'left', marginTop: '-12px'}}>{capitalize(props.thisGuest.full_name)}</h3>
                         <Row style={{paddingTop: '20px'}}>
-                            <Col span={16}>
+                            <Col span={colSize}>
                                 {invitedRehearsalDinner &&
                                     <>
                                     <h3 style={{textAlign: 'left', display: 'inline'}}>Rehearsal Dinner:</h3>
@@ -132,7 +133,7 @@ const OtherRSVP = (props) => {
                                 <h3 style={{textAlign: 'left', marginTop: '-12px'}}>{capitalize(props.plusOneGuest.full_name)}</h3>
                             }
                             <Row style={{paddingTop: '20px'}}>
-                                <Col span={16}>
+                                <Col span={colSize}>
                                     {invitedRehearsalDinner &&
                                         <>
                                         <h3 style={{textAlign: 'left', display: 'inline'}}>Rehearsal Dinner:</h3>
