@@ -167,7 +167,7 @@ const WeddingRSVP = (props) => {
                     <Card style={style.thisGuestCard}>
                         <h3 style={{textAlign: 'left', marginTop: '-12px'}}>{capitalize(props.thisGuest.full_name)}</h3>
                         <Row style={{paddingTop: '20px'}}>
-                            <Col span={12}>
+                            <Col span={24}>
                                 <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony & Reception:</h3>
                                 <Radio.Group 
                                 
@@ -199,7 +199,7 @@ const WeddingRSVP = (props) => {
                                 </div>
                             }
                             <Row style={{paddingTop: '20px'}}>
-                                <Col span={12}>
+                                <Col span={24}>
                                     <h3 style={{textAlign: 'left', display: 'inline'}}>Ceremony & Reception:</h3>
                                     <Radio.Group 
                                     options={yesNoOptions} 
