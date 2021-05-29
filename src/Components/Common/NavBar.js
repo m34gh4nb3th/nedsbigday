@@ -35,6 +35,9 @@ class NavBar extends React.Component {
                 <Menu.Item key="registry">
                     <Link to="/registry">Registry</Link>
                 </Menu.Item>
+                <Menu.Item key="covid">
+                    <Link to="/covid">COVID</Link>
+                </Menu.Item>
             </Menu>
         )
     }

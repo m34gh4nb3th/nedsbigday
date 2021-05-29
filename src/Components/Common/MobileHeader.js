@@ -47,8 +47,9 @@ const MobileHeader = () => {
                 onClose={() => setOpenDrawer(false)}
                 visible={openDrawer}
                 closeIcon={<ArrowLeftOutlined />}
+                drawerStyle={{backgroundColor: '#fffdfc'}}
             >
-                <div style={{marginTop: '20px'}}><NavBar onChangePage={() => setOpenDrawer(false)}/></div>
+                <div style={{marginTop: '20px', backgroundColor: '#fffdfc'}}><NavBar onChangePage={() => setOpenDrawer(false)}/></div>
             </Drawer>
         </div>
     )
