@@ -14,6 +14,7 @@ import RSVPList from './Components/Pages/RSVPList';
 import ActivitiesPage from './Components/Activities/ActivitiesPage';
 import TriviaPage from './Components/Trivia/TriviaPage';
 import Registry from './Components/Pages/Registry';
+import Covid from './Components/Pages/Covid';
 import { Layout } from 'antd';
 
 const { Footer, Content } = Layout;
@@ -51,6 +52,9 @@ const App = () => (
           </Route>
           <Route path="/registry">
             <Registry />
+          </Route>
+          <Route path="/covid">
+            <Covid />
           </Route>
           <Route path="/topsecret">
             <RSVPList />
