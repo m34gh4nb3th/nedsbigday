@@ -87,7 +87,8 @@ const WeddingRSVP = (props) => {
                 ...props.thisGuest,
                 attending_reception: recResp,
                 unknown_plus_one: false,
-                known_guest: db.doc(`/guests/${guestId}`)
+                known_guest: db.doc(`/guests/${guestId}`),
+                new_list: true
             }
             //update original guest RSVP and plus one info
             handleUpdateGuests([updateGuest]);
