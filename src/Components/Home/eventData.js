@@ -28,13 +28,13 @@ const eventData = {
             eventName: "Ceremony",
             locationName: "Gates Amphitheater",
             locationLink: "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
-            time: "2:00PM - 3:00PM",
+            time: "2:30PM - 3:30PM",
             attire: "Semi-Formal"
         },
         {
             eventName: "Not-so-Catholic Gap",
             extra: "Wedding party and family pictures in the Sculpture park",
-            time: "3:00PM - 6:00PM",
+            time: "3:30PM - 6:00PM",
             gap: true
         },
         {
