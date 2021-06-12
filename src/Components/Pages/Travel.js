@@ -78,8 +78,7 @@ const Travel = () =>  {
                         <h2 style={style.category}>Other</h2>
                     </Col>
                     <Col md={{ span: 16 }} xs={{ span: 24 }} style={{textAlign: 'left'}}>
-                        <p style={{marginBottom: '0px'}}>We will coordinate shuttles for day-of transportation between the hotel and the venues. </p>
-                        <p style={{textAlign: 'center'}}><i>Details to come</i></p>
+                        <p>We have coordinated shuttles for day-of transportation between the hotel and the venues. <a href="/transportation" style={{textDecoration: 'underline'}}>Click here for a day-of transportation timeline </a> </p>
                         <p>There is parking available for $55 per day at the Charter Hotel should you choose to rent a car or drive.</p>
                         <p>The hotel is conveniently located downtown so you certainly do not need a car to get around and explore the city.</p>
                         <p>The city has great bus system and a couple (electric) bike rental companies if you want to leave the downtown area.</p>
