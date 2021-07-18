@@ -27,8 +27,9 @@ const eventData = {
         {
             eventName: "Ceremony",
             locationName: "Gates Amphitheater",
+            extra: "We ask that guests please plan to arrive by 2:45PM",
             locationLink: "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
-            time: "2:30PM - 3:30PM",
+            time: "3:00PM - 3:30PM",
             attire: "Semi-Formal"
         },
         {
