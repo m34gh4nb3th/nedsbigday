@@ -27,7 +27,7 @@ const Transportation = () =>  {
             <Card style={style.card}>
                 <h4>2:30 - Charter Hotel to Gates Amphitheater</h4>
                 <p>A shuttle will be waiting for guests in front of the hotel</p>
-                <h4>3:30 - Gates Amphitheater to Charter Hotel</h4>
+                <h4>3:45 - Gates Amphitheater to Charter Hotel</h4>
                 <p>
                     Guests can return to the hotel for the "not-so-Catholic" gap if they wish. 
                     <br/>Otherwise we recommend exploring the scultpure park or having a drink (or few) next door at <a href="https://pub70.com/" target="_blank">Pub 70 </a>
