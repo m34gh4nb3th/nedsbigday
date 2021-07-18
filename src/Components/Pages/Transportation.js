@@ -26,16 +26,16 @@ const Transportation = () =>  {
             <br/>See below for details on provided transportation.</p>
             <Card style={style.card}>
                 <h4>2:30 - Charter Hotel to Gates Amphitheater</h4>
-                <p>A shuttle will be waiting for guests in front of the hotel</p>
-                <h4>3:30 - Gates Amphitheater to Charter Hotel</h4>
+                <p>A shuttle will be waiting for guests in front of the hotel.</p>
+                <h4>3:45 - Gates Amphitheater to Charter Hotel</h4>
                 <p>
                     Guests can return to the hotel for the "not-so-Catholic" gap if they wish. 
-                    <br/>Otherwise we recommend exploring the scultpure park or having a drink (or few) next door at <a href="https://pub70.com/" target="_blank">Pub 70 </a>
+                    <br/>Otherwise we recommend exploring the scultpure park or having a drink (or few) next door at <a href="https://pub70.com/" target="_blank">Pub 70. </a>
                 </p>
                 <h4>5:30 - Charter Hotel to Reception</h4>
-                <p>A shuttle will be waiting for guests in front of the hotel</p>
+                <p>A shuttle will be waiting for guests in front of the hotel.</p>
                 <h4>5:45 - Pub 70 to Reception</h4>
-                <p>The shuttle will stop at Pub 70 after picking up guest from the hotel on the way to Almquist Family Winery</p>
+                <p>The shuttle will stop at Pub 70 after picking up guest from the hotel on the way to Almquist Family Winery.</p>
                 <h4>Post Reception - Lyft Code</h4>
                 <p>
                     <i>There will be no shuttle service after the reception.</i> 
